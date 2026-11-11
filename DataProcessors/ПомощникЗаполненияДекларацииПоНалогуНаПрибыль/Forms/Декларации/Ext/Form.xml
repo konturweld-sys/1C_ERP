@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Декларации" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<HeaderHeight>2</HeaderHeight>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Декларации</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДекларацииКонтекстноеМеню" id="3"/>
+			<AutoCommandBar name="ДекларацииКоманднаяПанель" id="2">
+				<ChildItems>
+					<Button name="ДекларацииДекларацииУстановитьФлажки" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДекларацииУстановитьФлажки</CommandName>
+						<ExtendedTooltip name="ДекларацииДекларацииУстановитьФлажкиРасширеннаяПодсказка" id="36"/>
+					</Button>
+					<Button name="ДекларацииДекларацииСнятьФлажки" id="37">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДекларацииСнятьФлажки</CommandName>
+						<ExtendedTooltip name="ДекларацииДекларацииСнятьФлажкиРасширеннаяПодсказка" id="38"/>
+					</Button>
+					<Button name="ДекларацииСформироватьДекларации" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СформироватьДекларации</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сформировать</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Generate</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДекларацииСформироватьДекларацииРасширеннаяПодсказка" id="40"/>
+					</Button>
+					<Button name="ДекларацииОткрытьГрупповуюОтправкуОтчетов" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьГрупповуюОтправкуОтчетов</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отправить</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Send</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДекларацииОткрытьГрупповуюОтправкуОтчетовРасширеннаяПодсказка" id="42"/>
+					</Button>
+					<Button name="ДекларацииОбновитьСостояние" id="53">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьСостояние</CommandName>
+						<ExtendedTooltip name="ДекларацииОбновитьСостояниеРасширеннаяПодсказка" id="54"/>
+					</Button>
+					<Button name="ДекларацииВсеДекларации" id="43">
+						<Type>CommandBarHyperlink</Type>
+						<CommandName>Form.Command.ВсеДекларации</CommandName>
+						<ExtendedTooltip name="ДекларацииВсеДекларацииРасширеннаяПодсказка" id="44"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДекларацииРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ДекларацииСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Декларации</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДекларацииСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ДекларацииСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДекларацииСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Декларации</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДекларацииСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДекларацииСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДекларацииУправлениеПоиском" id="8">
+				<AdditionSource>
+					<Item>Декларации</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДекларацииУправлениеПоискомКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ДекларацииУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДекларацииВыбор</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ДекларацииСформироватьДекларацию" id="20">
+					<DataPath>Декларации.СформироватьДекларацию</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДекларацииСформироватьДекларациюКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДекларацииСформироватьДекларациюРасширеннаяПодсказка" id="22"/>
+				</CheckBoxField>
+				<InputField name="ДекларацииРегистрацияВНалоговомОргане" id="14">
+					<DataPath>Декларации.РегистрацияВНалоговомОргане</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ДекларацииРегистрацияВНалоговомОрганеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДекларацииРегистрацияВНалоговомОрганеРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ДекларацииКодМестаПредставления" id="17">
+					<DataPath>Декларации.КодМестаПредставления</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ДекларацииКодМестаПредставленияКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДекларацииКодМестаПредставленияРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ДекларацииОтчетныйПериодСтрокой" id="45">
+					<DataPath>Декларации.ОтчетныйПериодСтрокой</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчетный период</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting period</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Width>28</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДекларацииОтчетныйПериодСтрокойКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ДекларацииОтчетныйПериодСтрокойРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ДекларацииОтчетныйПериод" id="29">
+					<DataPath>Декларации.ОтчетныйПериод</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ДекларацииОтчетныйПериодКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДекларацииОтчетныйПериодРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ДекларацииНомерКорректировки" id="32">
+					<DataPath>Декларации.НомерКорректировки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер корр.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Adj. number</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекларацииНомерКорректировкиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДекларацииНомерКорректировкиРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<ColumnGroup name="ГруппаДекларация" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Declaration</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаДекларацияРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<LabelField name="ДекларацииДекларация" id="23">
+							<DataPath>Декларации.Декларация</DataPath>
+							<CellHyperlink>true</CellHyperlink>
+							<ShowInHeader>false</ShowInHeader>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>7</MaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<TextColor>style:ГиперссылкаТабличнойЧасти</TextColor>
+							<ContextMenu name="ДекларацииДекларацияКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ДекларацииДекларацияРасширеннаяПодсказка" id="25"/>
+						</LabelField>
+						<LabelField name="ДекларацииОчиститьДекларацию" id="48">
+							<DataPath>Декларации.ОчиститьДекларацию</DataPath>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<CellHyperlink>true</CellHyperlink>
+							<ShowInHeader>false</ShowInHeader>
+							<Hiperlink>true</Hiperlink>
+							<TextColor>style:ГиперссылкаТабличнойЧасти</TextColor>
+							<ContextMenu name="ДекларацииОчиститьДекларациюКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ДекларацииОчиститьДекларациюРасширеннаяПодсказка" id="50"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ДекларацииСостояние" id="26">
+					<DataPath>Декларации.Состояние</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ДекларацииСостояниеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДекларацииСостояниеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Декларации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декларации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Declarations</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="РегистрацияВНалоговомОргане" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация в налоговом органе</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Registration with tax authority</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РегистрацииВНалоговомОргане</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодМестаПредставления" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код места представления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Presentation place code</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>3</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СформироватьДекларацию" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформировать декларацию</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Generate declaration</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Декларация" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Declaration</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.РегламентированныйОтчет</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Состояние" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>State</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОтчетныйПериод" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчетный период</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting period</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерКорректировки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер корректировки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Adjustment number</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДекларацияНеАктуальна" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация не актуальна</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Declaration is not relevant</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОтчетныйПериодСтрокой" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчетный период строкой</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting period as string</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОчиститьДекларацию" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистить декларацию</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Clear declaration</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Организация" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Company</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаборКорректировок" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор корректировок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Adjustment set</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КорректировкиПрошлыхПериодовНУ</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДекларацииСнятьФлажки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декларации снять флажки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Declarations Clear checkboxes</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДекларацииСнятьФлажки</Action>
+		</Command>
+		<Command name="ДекларацииУстановитьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декларации установить флажки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Declarations Select checkboxes</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДекларацииУстановитьФлажки</Action>
+		</Command>
+		<Command name="СформироватьДекларации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать декларации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate declarations</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СформироватьДекларации</Action>
+		</Command>
+		<Command name="ОткрытьГрупповуюОтправкуОтчетов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть групповую отправку отчетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open batch report sending</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ТипСписок</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьГрупповуюОтправкуОтчетов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВсеДекларации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все декларации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All declarations</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВсеДекларации</Action>
+		</Command>
+		<Command name="ОбновитьСостояние" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить состояние</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update state</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСостояние</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НаборКорректировок">
+			<Type>
+				<v8:Type>cfg:CatalogRef.КорректировкиПрошлыхПериодовНУ</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

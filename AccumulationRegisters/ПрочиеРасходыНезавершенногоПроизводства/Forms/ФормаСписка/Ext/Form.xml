@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>User settings group</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>User settings group</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список движений по регистру</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List of register records</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeLoadUserSettingsAtServer">СписокПередЗагрузкойПользовательскихНастроекНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Период" id="16">
+					<DataPath>Список.Период</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Регистратор" id="19">
+					<DataPath>Список.Регистратор</DataPath>
+					<ContextMenu name="РегистраторКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="РегистраторРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="НомерСтроки" id="22">
+					<DataPath>Список.НомерСтроки</DataPath>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="СтатьяРасходов" id="25">
+					<DataPath>Список.СтатьяРасходов</DataPath>
+					<ContextMenu name="СтатьяРасходовКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СтатьяРасходовРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Организация" id="28">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="Подразделение" id="31">
+					<DataPath>Список.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="АналитикаРасходов" id="34">
+					<DataPath>Список.АналитикаРасходов</DataPath>
+					<ContextMenu name="АналитикаРасходовКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="АналитикаРасходовРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="НаправлениеДеятельности" id="37">
+					<DataPath>Список.НаправлениеДеятельности</DataPath>
+					<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="ПартияПроизводства" id="40">
+					<DataPath>Список.ПартияПроизводства</DataPath>
+					<ContextMenu name="ПартияПроизводстваКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПартияПроизводстваРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="ЗаказНаПроизводство" id="46">
+					<DataPath>Список.ЗаказНаПроизводство</DataPath>
+					<ContextMenu name="ЗаказНаПроизводствоКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ЗаказНаПроизводствоРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="КодСтрокиПродукция" id="49">
+					<DataPath>Список.КодСтрокиПродукция</DataPath>
+					<ContextMenu name="КодСтрокиПродукцияКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="КодСтрокиПродукцияРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="Этап" id="52">
+					<DataPath>Список.Этап</DataPath>
+					<ContextMenu name="ЭтапКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ЭтапРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="СтатьяКалькуляции" id="55">
+					<DataPath>Список.СтатьяКалькуляции</DataPath>
+					<ContextMenu name="СтатьяКалькуляцииКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="СтатьяКалькуляцииРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="ГруппаПродукции" id="58">
+					<DataPath>Список.ГруппаПродукции</DataPath>
+					<ContextMenu name="ГруппаПродукцииКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ГруппаПродукцииРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="ПравилоОтнесенияНаВыпуск" id="61">
+					<DataPath>Список.ПравилоОтнесенияНаВыпуск</DataPath>
+					<ContextMenu name="ПравилоОтнесенияНаВыпускКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ПравилоОтнесенияНаВыпускРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="Стоимость" id="64">
+					<DataPath>Список.Стоимость</DataPath>
+					<ContextMenu name="СтоимостьКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СтоимостьРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="СтоимостьБезНДС" id="67">
+					<DataPath>Список.СтоимостьБезНДС</DataPath>
+					<ContextMenu name="СтоимостьБезНДСКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="СтоимостьБезНДСРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="СтоимостьРегл" id="70">
+					<DataPath>Список.СтоимостьРегл</DataPath>
+					<ContextMenu name="СтоимостьРеглКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="СтоимостьРеглРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<InputField name="СтоимостьНУ" id="163">
+					<DataPath>Список.СтоимостьНУ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость (НУ)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Cost (TA)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтоимостьНУКонтекстноеМеню" id="164"/>
+					<ExtendedTooltip name="СтоимостьНУРасширеннаяПодсказка" id="165"/>
+				</InputField>
+				<LabelField name="ПостояннаяРазница" id="73">
+					<DataPath>Список.ПостояннаяРазница</DataPath>
+					<ContextMenu name="ПостояннаяРазницаКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ПостояннаяРазницаРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="ВременнаяРазница" id="76">
+					<DataPath>Список.ВременнаяРазница</DataPath>
+					<ContextMenu name="ВременнаяРазницаКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ВременнаяРазницаРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+				<InputField name="СтоимостьНДД" id="154">
+					<DataPath>Список.СтоимостьНДД</DataPath>
+					<ContextMenu name="СтоимостьНДДКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="СтоимостьНДДРасширеннаяПодсказка" id="156"/>
+				</InputField>
+				<LabelField name="ДоляСтоимости" id="79">
+					<DataPath>Список.ДоляСтоимости</DataPath>
+					<ContextMenu name="ДоляСтоимостиКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ДоляСтоимостиРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+				<LabelField name="СтоимостьУпр" id="82">
+					<DataPath>Список.СтоимостьУпр</DataPath>
+					<ContextMenu name="СтоимостьУпрКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="СтоимостьУпрРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="Продукция" id="97">
+					<DataPath>Список.Продукция</DataPath>
+					<ContextMenu name="ПродукцияКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ПродукцияРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+				<LabelField name="ХарактеристикаПродукции" id="100">
+					<DataPath>Список.ХарактеристикаПродукции</DataPath>
+					<ContextMenu name="ХарактеристикаПродукцииКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ХарактеристикаПродукцииРасширеннаяПодсказка" id="102"/>
+				</LabelField>
+				<LabelField name="КоличествоПродукции" id="103">
+					<DataPath>Список.КоличествоПродукции</DataPath>
+					<ContextMenu name="КоличествоПродукцииКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="КоличествоПродукцииРасширеннаяПодсказка" id="105"/>
+				</LabelField>
+				<LabelField name="АналитикаУчетаПродукции" id="106">
+					<DataPath>Список.АналитикаУчетаПродукции</DataPath>
+					<ContextMenu name="АналитикаУчетаПродукцииКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="АналитикаУчетаПродукцииРасширеннаяПодсказка" id="108"/>
+				</LabelField>
+				<LabelField name="РазделУчета" id="109">
+					<DataPath>Список.РазделУчета</DataPath>
+					<ContextMenu name="РазделУчетаКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="РазделУчетаРасширеннаяПодсказка" id="111"/>
+				</LabelField>
+				<LabelField name="ВидЗапасов" id="112">
+					<DataPath>Список.ВидЗапасов</DataPath>
+					<ContextMenu name="ВидЗапасовКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ВидЗапасовРасширеннаяПодсказка" id="114"/>
+				</LabelField>
+				<LabelField name="ДокументДвижения" id="115">
+					<DataPath>Список.ДокументДвижения</DataPath>
+					<ContextMenu name="ДокументДвиженияКонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="ДокументДвиженияРасширеннаяПодсказка" id="117"/>
+				</LabelField>
+				<LabelField name="ДокументИсточник" id="118">
+					<DataPath>Список.ДокументИсточник</DataPath>
+					<ContextMenu name="ДокументИсточникКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="ДокументИсточникРасширеннаяПодсказка" id="120"/>
+				</LabelField>
+				<LabelField name="ДокументВыпуска" id="121">
+					<DataPath>Список.ДокументВыпуска</DataPath>
+					<ContextMenu name="ДокументВыпускаКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ДокументВыпускаРасширеннаяПодсказка" id="123"/>
+				</LabelField>
+				<LabelField name="РасчетСебестоимости" id="124">
+					<DataPath>Список.РасчетСебестоимости</DataPath>
+					<ContextMenu name="РасчетСебестоимостиКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="РасчетСебестоимостиРасширеннаяПодсказка" id="126"/>
+				</LabelField>
+				<LabelField name="РасчетПартий" id="127">
+					<DataPath>Список.РасчетПартий</DataPath>
+					<ContextMenu name="РасчетПартийКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="РасчетПартийРасширеннаяПодсказка" id="129"/>
+				</LabelField>
+				<LabelField name="ПоказательОтнесенияНаПартию" id="130">
+					<DataPath>Список.ПоказательОтнесенияНаПартию</DataPath>
+					<ContextMenu name="ПоказательОтнесенияНаПартиюКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="ПоказательОтнесенияНаПартиюРасширеннаяПодсказка" id="132"/>
+				</LabelField>
+				<LabelField name="ПоказательОтнесенияНаПартиюБезНДС" id="133">
+					<DataPath>Список.ПоказательОтнесенияНаПартиюБезНДС</DataPath>
+					<ContextMenu name="ПоказательОтнесенияНаПартиюБезНДСКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="ПоказательОтнесенияНаПартиюБезНДСРасширеннаяПодсказка" id="135"/>
+				</LabelField>
+				<LabelField name="ПоказательОтнесенияНаПартиюРегл" id="136">
+					<DataPath>Список.ПоказательОтнесенияНаПартиюРегл</DataPath>
+					<ContextMenu name="ПоказательОтнесенияНаПартиюРеглКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ПоказательОтнесенияНаПартиюРеглРасширеннаяПодсказка" id="138"/>
+				</LabelField>
+				<LabelField name="ПоказательОтнесенияНаПартиюУпр" id="139">
+					<DataPath>Список.ПоказательОтнесенияНаПартиюУпр</DataPath>
+					<ContextMenu name="ПоказательОтнесенияНаПартиюУпрКонтекстноеМеню" id="140"/>
+					<ExtendedTooltip name="ПоказательОтнесенияНаПартиюУпрРасширеннаяПодсказка" id="141"/>
+				</LabelField>
+				<LabelField name="АналитикаПартииВыпуска" id="142">
+					<DataPath>Список.АналитикаПартииВыпуска</DataPath>
+					<ContextMenu name="АналитикаПартииВыпускаКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="АналитикаПартииВыпускаРасширеннаяПодсказка" id="144"/>
+				</LabelField>
+				<LabelField name="КорАналитикаУчетаПартий" id="145">
+					<DataPath>Список.КорАналитикаУчетаПартий</DataPath>
+					<ContextMenu name="КорАналитикаУчетаПартийКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="КорАналитикаУчетаПартийРасширеннаяПодсказка" id="147"/>
+				</LabelField>
+				<LabelField name="НастройкаХозяйственнойОперации" id="148">
+					<DataPath>Список.НастройкаХозяйственнойОперации</DataPath>
+					<ContextMenu name="НастройкаХозяйственнойОперацииКонтекстноеМеню" id="149"/>
+					<ExtendedTooltip name="НастройкаХозяйственнойОперацииРасширеннаяПодсказка" id="150"/>
+				</LabelField>
+				<LabelField name="ИдентификаторФинЗаписи" id="151">
+					<DataPath>Список.ИдентификаторФинЗаписи</DataPath>
+					<ContextMenu name="ИдентификаторФинЗаписиКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="ИдентификаторФинЗаписиРасширеннаяПодсказка" id="153"/>
+				</LabelField>
+				<CheckBoxField name="Сторно" id="157">
+					<DataPath>Список.Сторно</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СторноКонтекстноеМеню" id="158"/>
+					<ExtendedTooltip name="СторноРасширеннаяПодсказка" id="159"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ 
+	ПрочиеРасходыНЗП.Период, 
+	ПрочиеРасходыНЗП.Регистратор, 
+	ПрочиеРасходыНЗП.НомерСтроки, 
+	ПрочиеРасходыНЗП.Активность, 
+	ПрочиеРасходыНЗП.ВидДвижения, 
+	ПрочиеРасходыНЗП.СтатьяРасходов, 
+	ПрочиеРасходыНЗП.Организация, 
+	ПрочиеРасходыНЗП.Подразделение, 
+	ПрочиеРасходыНЗП.АналитикаРасходов, 
+	ПрочиеРасходыНЗП.НаправлениеДеятельности, 
+	ПрочиеРасходыНЗП.ПартияПроизводства, 
+	ПрочиеРасходыНЗП.ЗаказНаПроизводство, 
+	ПрочиеРасходыНЗП.КодСтрокиПродукция, 
+	ПрочиеРасходыНЗП.Этап, 
+	ПрочиеРасходыНЗП.СтатьяКалькуляции, 
+	ПрочиеРасходыНЗП.ГруппаПродукции, 
+	ПрочиеРасходыНЗП.ПравилоОтнесенияНаВыпуск, 
+	ПрочиеРасходыНЗП.Стоимость, 
+	ПрочиеРасходыНЗП.СтоимостьБезНДС, 
+	ПрочиеРасходыНЗП.СтоимостьРегл,
+	ПрочиеРасходыНЗП.СтоимостьРегл
+		- ПрочиеРасходыНЗП.ПостояннаяРазница
+		- ПрочиеРасходыНЗП.ВременнаяРазница КАК СтоимостьНУ,
+	ПрочиеРасходыНЗП.ПостояннаяРазница, 
+	ПрочиеРасходыНЗП.ВременнаяРазница, 
+	ПрочиеРасходыНЗП.ДоляСтоимости, 
+	ПрочиеРасходыНЗП.СтоимостьУпр, 
+	ПрочиеРасходыНЗП.СтоимостьНДД, 
+	ПрочиеРасходыНЗП.Продукция, 
+	ПрочиеРасходыНЗП.ХарактеристикаПродукции, 
+	ПрочиеРасходыНЗП.КоличествоПродукции, 
+	ПрочиеРасходыНЗП.АналитикаУчетаПродукции, 
+	ПрочиеРасходыНЗП.РазделУчета, 
+	ПрочиеРасходыНЗП.ВидЗапасов, 
+	ПрочиеРасходыНЗП.ДокументДвижения, 
+	ПрочиеРасходыНЗП.ДокументИсточник, 
+	ПрочиеРасходыНЗП.ДокументВыпуска, 
+	ПрочиеРасходыНЗП.РасчетСебестоимости, 
+	ПрочиеРасходыНЗП.РасчетПартий, 
+	ПрочиеРасходыНЗП.ПоказательОтнесенияНаПартию, 
+	ПрочиеРасходыНЗП.ПоказательОтнесенияНаПартиюБезНДС, 
+	ПрочиеРасходыНЗП.ПоказательОтнесенияНаПартиюРегл, 
+	ПрочиеРасходыНЗП.ПоказательОтнесенияНаПартиюУпр, 
+	ПрочиеРасходыНЗП.АналитикаПартииВыпуска, 
+	ПрочиеРасходыНЗП.КорАналитикаУчетаПартий, 
+	ПрочиеРасходыНЗП.НастройкаХозяйственнойОперации, 
+	ПрочиеРасходыНЗП.ИдентификаторФинЗаписи, 
+	ПрочиеРасходыНЗП.Сторно, 
+	ПрочиеРасходыНЗП.МоментВремени
+ ИЗ 
+	РегистрНакопления.ПрочиеРасходыНезавершенногоПроизводства КАК ПрочиеРасходыНЗП</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Период</dcssch:dataPath>
+					<dcssch:field>Период</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Регистратор</dcssch:dataPath>
+					<dcssch:field>Регистратор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСтроки</dcssch:dataPath>
+					<dcssch:field>НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Активность</dcssch:dataPath>
+					<dcssch:field>Активность</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДвижения</dcssch:dataPath>
+					<dcssch:field>ВидДвижения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатьяРасходов</dcssch:dataPath>
+					<dcssch:field>СтатьяРасходов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АналитикаРасходов</dcssch:dataPath>
+					<dcssch:field>АналитикаРасходов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаправлениеДеятельности</dcssch:dataPath>
+					<dcssch:field>НаправлениеДеятельности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПартияПроизводства</dcssch:dataPath>
+					<dcssch:field>ПартияПроизводства</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаказНаПроизводство</dcssch:dataPath>
+					<dcssch:field>ЗаказНаПроизводство</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодСтрокиПродукция</dcssch:dataPath>
+					<dcssch:field>КодСтрокиПродукция</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Этап</dcssch:dataPath>
+					<dcssch:field>Этап</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатьяКалькуляции</dcssch:dataPath>
+					<dcssch:field>СтатьяКалькуляции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГруппаПродукции</dcssch:dataPath>
+					<dcssch:field>ГруппаПродукции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПравилоОтнесенияНаВыпуск</dcssch:dataPath>
+					<dcssch:field>ПравилоОтнесенияНаВыпуск</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Стоимость</dcssch:dataPath>
+					<dcssch:field>Стоимость</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтоимостьБезНДС</dcssch:dataPath>
+					<dcssch:field>СтоимостьБезНДС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтоимостьРегл</dcssch:dataPath>
+					<dcssch:field>СтоимостьРегл</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПостояннаяРазница</dcssch:dataPath>
+					<dcssch:field>ПостояннаяРазница</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВременнаяРазница</dcssch:dataPath>
+					<dcssch:field>ВременнаяРазница</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДоляСтоимости</dcssch:dataPath>
+					<dcssch:field>ДоляСтоимости</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтоимостьУпр</dcssch:dataPath>
+					<dcssch:field>СтоимостьУпр</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтоимостьНДД</dcssch:dataPath>
+					<dcssch:field>СтоимостьНДД</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Продукция</dcssch:dataPath>
+					<dcssch:field>Продукция</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ХарактеристикаПродукции</dcssch:dataPath>
+					<dcssch:field>ХарактеристикаПродукции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоПродукции</dcssch:dataPath>
+					<dcssch:field>КоличествоПродукции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АналитикаУчетаПродукции</dcssch:dataPath>
+					<dcssch:field>АналитикаУчетаПродукции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РазделУчета</dcssch:dataPath>
+					<dcssch:field>РазделУчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидЗапасов</dcssch:dataPath>
+					<dcssch:field>ВидЗапасов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДокументДвижения</dcssch:dataPath>
+					<dcssch:field>ДокументДвижения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДокументИсточник</dcssch:dataPath>
+					<dcssch:field>ДокументИсточник</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДокументВыпуска</dcssch:dataPath>
+					<dcssch:field>ДокументВыпуска</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасчетСебестоимости</dcssch:dataPath>
+					<dcssch:field>РасчетСебестоимости</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасчетПартий</dcssch:dataPath>
+					<dcssch:field>РасчетПартий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПоказательОтнесенияНаПартию</dcssch:dataPath>
+					<dcssch:field>ПоказательОтнесенияНаПартию</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПоказательОтнесенияНаПартиюБезНДС</dcssch:dataPath>
+					<dcssch:field>ПоказательОтнесенияНаПартиюБезНДС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПоказательОтнесенияНаПартиюРегл</dcssch:dataPath>
+					<dcssch:field>ПоказательОтнесенияНаПартиюРегл</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПоказательОтнесенияНаПартиюУпр</dcssch:dataPath>
+					<dcssch:field>ПоказательОтнесенияНаПартиюУпр</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АналитикаПартииВыпуска</dcssch:dataPath>
+					<dcssch:field>АналитикаПартииВыпуска</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КорАналитикаУчетаПартий</dcssch:dataPath>
+					<dcssch:field>КорАналитикаУчетаПартий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкаХозяйственнойОперации</dcssch:dataPath>
+					<dcssch:field>НастройкаХозяйственнойОперации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторФинЗаписи</dcssch:dataPath>
+					<dcssch:field>ИдентификаторФинЗаписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сторно</dcssch:dataPath>
+					<dcssch:field>Сторно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтоимостьНУ</dcssch:dataPath>
+					<dcssch:field>СтоимостьНУ</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость НУ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>TA cost</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:TypeId>48fa9d68-ae46-4d76-988a-88927f7a0ca6</v8:TypeId>
+					</dcssch:valueType>
+				</Field>
+				<MainTable>AccumulationRegister.ПрочиеРасходыНезавершенногоПроизводства</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,1136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Сведения об оборудовании и вотчерах</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Сведения об оборудовании и вотчерах</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОк" id="118">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Ок</CommandName>
+				<ExtendedTooltip name="ФормаОкРасширеннаяПодсказка" id="119"/>
+			</Button>
+			<Button name="ФормаПроверить" id="120">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Проверить</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьРасширеннаяПодсказка" id="121"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="2"/>
+			<Events>
+				<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ОборудСправоч" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оборудование из справочника</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Оборудование из справочника</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оборуд справоч</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Оборуд справоч</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОборудСправочРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="СвОборудСправоч" id="29">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СвОборудСправоч</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СвОборудСправочКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="СвОборудСправочКоманднаяПанель" id="31">
+								<ChildItems>
+									<Button name="СвОборудСправочОчиститьСвОборудСправоч" id="122">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОчиститьСвОборудСправоч</CommandName>
+										<ExtendedTooltip name="СвОборудСправочОчиститьСвОборудСправочРасширеннаяПодсказка" id="123"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СвОборудСправочРасширеннаяПодсказка" id="32"/>
+							<SearchStringAddition name="СвОборудСправочСтрокаПоиска" id="33">
+								<AdditionSource>
+									<Item>СвОборудСправоч</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвОборудСправочСтрокаПоискаКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="СвОборудСправочСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СвОборудСправочСостояниеПросмотра" id="36">
+								<AdditionSource>
+									<Item>СвОборудСправоч</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвОборудСправочСостояниеПросмотраКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="СвОборудСправочСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СвОборудСправочУправлениеПоиском" id="39">
+								<AdditionSource>
+									<Item>СвОборудСправоч</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СвОборудСправочУправлениеПоискомКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="СвОборудСправочУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СвОборудСправочПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">СвОборудСправочПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СвОборудСправочКодОборуд" id="42">
+									<DataPath>СвОборудСправоч.КодОборуд</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудСправочКодОборудКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="СвОборудСправочКодОборудРасширеннаяПодсказка" id="44"/>
+									<Events>
+										<Event name="StartChoice">СвОборудСправочКодОборудНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="СвОборудСправочЗаводНом" id="45">
+									<DataPath>СвОборудСправоч.ЗаводНом</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудСправочЗаводНомКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="СвОборудСправочЗаводНомРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<InputField name="СвОборудСправочКоличЧасЭкспл" id="48">
+									<DataPath>СвОборудСправоч.КоличЧасЭкспл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудСправочКоличЧасЭксплКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="СвОборудСправочКоличЧасЭксплРасширеннаяПодсказка" id="50"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ОборудПроизв" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Произвольное оборудование</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Произвольное оборудование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оборуд произв</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Оборуд произв</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОборудПроизвРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="СвОборудПроизв" id="51">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СвОборудПроизв</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СвОборудПроизвКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="СвОборудПроизвКоманднаяПанель" id="53">
+								<ChildItems>
+									<Button name="СвОборудПроизвОчиститьСвОборудПроизв" id="124">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОчиститьСвОборудПроизв</CommandName>
+										<ExtendedTooltip name="СвОборудПроизвОчиститьСвОборудПроизвРасширеннаяПодсказка" id="125"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СвОборудПроизвРасширеннаяПодсказка" id="54"/>
+							<SearchStringAddition name="СвОборудПроизвСтрокаПоиска" id="55">
+								<AdditionSource>
+									<Item>СвОборудПроизв</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвОборудПроизвСтрокаПоискаКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="СвОборудПроизвСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СвОборудПроизвСостояниеПросмотра" id="58">
+								<AdditionSource>
+									<Item>СвОборудПроизв</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвОборудПроизвСостояниеПросмотраКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="СвОборудПроизвСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СвОборудПроизвУправлениеПоиском" id="61">
+								<AdditionSource>
+									<Item>СвОборудПроизв</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СвОборудПроизвУправлениеПоискомКонтекстноеМеню" id="62"/>
+								<ExtendedTooltip name="СвОборудПроизвУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeDeleteRow">СвОборудПроизвПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СвОборудПроизвМарка" id="64">
+									<DataPath>СвОборудПроизв.Марка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудПроизвМаркаКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="СвОборудПроизвМаркаРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="СвОборудПроизвМодель" id="67">
+									<DataPath>СвОборудПроизв.Модель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудПроизвМодельКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="СвОборудПроизвМодельРасширеннаяПодсказка" id="69"/>
+								</InputField>
+								<InputField name="СвОборудПроизвАлгоритм" id="70">
+									<DataPath>СвОборудПроизв.Алгоритм</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудПроизвАлгоритмКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="СвОборудПроизвАлгоритмРасширеннаяПодсказка" id="72"/>
+									<Events>
+										<Event name="StartChoice">СвОборудПроизвАлгоритмНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="СвОборудПроизвВычислитМощн" id="73">
+									<DataPath>СвОборудПроизв.ВычислитМощн</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудПроизвВычислитМощнКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="СвОборудПроизвВычислитМощнРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="СвОборудПроизвКоличЭнерг" id="76">
+									<DataPath>СвОборудПроизв.КоличЭнерг</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудПроизвКоличЭнергКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="СвОборудПроизвКоличЭнергРасширеннаяПодсказка" id="78"/>
+								</InputField>
+								<InputField name="СвОборудПроизвЗаводНом" id="79">
+									<DataPath>СвОборудПроизв.ЗаводНом</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудПроизвЗаводНомКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="СвОборудПроизвЗаводНомРасширеннаяПодсказка" id="81"/>
+								</InputField>
+								<InputField name="СвОборудПроизвКоличЧасЭкспл" id="82">
+									<DataPath>СвОборудПроизв.КоличЧасЭкспл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СвОборудПроизвКоличЧасЭксплКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="СвОборудПроизвКоличЧасЭксплРасширеннаяПодсказка" id="84"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Вотчер" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения о watcher-link</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Сведения о watcher-link</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вотчер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Вотчер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВотчерРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<CheckBoxField name="ПрОтсВотчер" id="107">
+							<DataPath>ПрОтсВотчер</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПрОтсВотчерКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ПрОтсВотчерРасширеннаяПодсказка" id="109"/>
+							<Events>
+								<Event name="OnChange">ПрОтсВотчерПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СсылкаНаПул" id="131">
+							<DataPath>СсылкаНаПул</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СсылкаНаПулКонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="СсылкаНаПулРасширеннаяПодсказка" id="133"/>
+							<Events>
+								<Event name="OnChange">СсылкаНаПулПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ДобытВалют" id="85">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация о цифровой валюте</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Информация о цифровой валюте</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добыт валют</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Добыт валют</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДобытВалютРасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<Table name="СвДобытВалют" id="87">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СвДобытВалют</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СвДобытВалютКонтекстноеМеню" id="88">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СвДобытВалютКонтекстноеМенюДобавитьВалюты" id="114">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавитьВалюты</CommandName>
+										<ExtendedTooltip name="СвДобытВалютКонтекстноеМенюДобавитьВалютыРасширеннаяПодсказка" id="115"/>
+									</Button>
+									<Button name="СвДобытВалютКонтекстноеМенюУдалитьВалюты" id="116">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьВалюты</CommandName>
+										<ExtendedTooltip name="СвДобытВалютКонтекстноеМенюУдалитьВалютыРасширеннаяПодсказка" id="117"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СвДобытВалютКоманднаяПанель" id="89">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СвДобытВалютДобавитьВалюты" id="103">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавитьВалюты</CommandName>
+										<ExtendedTooltip name="СвДобытВалютДобавитьВалютыРасширеннаяПодсказка" id="104"/>
+									</Button>
+									<Button name="СвДобытВалютУдалитьВалюты" id="105">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьВалюты</CommandName>
+										<ExtendedTooltip name="СвДобытВалютУдалитьВалютыРасширеннаяПодсказка" id="106"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СвДобытВалютРасширеннаяПодсказка" id="90"/>
+							<SearchStringAddition name="СвДобытВалютСтрокаПоиска" id="91">
+								<AdditionSource>
+									<Item>СвДобытВалют</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвДобытВалютСтрокаПоискаКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="СвДобытВалютСтрокаПоискаРасширеннаяПодсказка" id="93"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СвДобытВалютСостояниеПросмотра" id="94">
+								<AdditionSource>
+									<Item>СвДобытВалют</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвДобытВалютСостояниеПросмотраКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="СвДобытВалютСостояниеПросмотраРасширеннаяПодсказка" id="96"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СвДобытВалютУправлениеПоиском" id="97">
+								<AdditionSource>
+									<Item>СвДобытВалют</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СвДобытВалютУправлениеПоискомКонтекстноеМеню" id="98"/>
+								<ExtendedTooltip name="СвДобытВалютУправлениеПоискомРасширеннаяПодсказка" id="99"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СвДобытВалютВыбор</Event>
+								<Event name="BeforeAddRow">СвДобытВалютПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">СвДобытВалютПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СвДобытВалютОписание" id="100">
+									<DataPath>СвДобытВалют.Описание</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<TextEdit>false</TextEdit>
+									<TextColor>style:ЦветГиперссылкиБРО</TextColor>
+									<ContextMenu name="СвДобытВалютОписаниеКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="СвДобытВалютОписаниеРасширеннаяПодсказка" id="102"/>
+									<Events>
+										<Event name="Clearing">СвДобытВалютОписаниеОчистка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ТарифыСтраница" id="134">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тарифы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Тарифы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тарифы страница</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Тарифы страница</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТарифыСтраницаРасширеннаяПодсказка" id="135"/>
+					<ChildItems>
+						<Table name="Тарифы" id="136">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>Тарифы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТарифыКонтекстноеМеню" id="137"/>
+							<AutoCommandBar name="ТарифыКоманднаяПанель" id="138"/>
+							<ExtendedTooltip name="ТарифыРасширеннаяПодсказка" id="139"/>
+							<SearchStringAddition name="ТарифыСтрокаПоиска" id="140">
+								<AdditionSource>
+									<Item>Тарифы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТарифыСтрокаПоискаКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="ТарифыСтрокаПоискаРасширеннаяПодсказка" id="142"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТарифыСостояниеПросмотра" id="143">
+								<AdditionSource>
+									<Item>Тарифы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТарифыСостояниеПросмотраКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="ТарифыСостояниеПросмотраРасширеннаяПодсказка" id="145"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТарифыУправлениеПоиском" id="146">
+								<AdditionSource>
+									<Item>Тарифы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТарифыУправлениеПоискомКонтекстноеМеню" id="147"/>
+								<ExtendedTooltip name="ТарифыУправлениеПоискомРасширеннаяПодсказка" id="148"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТарифыТариф" id="149">
+									<DataPath>Тарифы.Тариф</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТарифыТарифКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="ТарифыТарифРасширеннаяПодсказка" id="151"/>
+								</InputField>
+								<InputField name="ТарифыОбъемЭнерг" id="152">
+									<DataPath>Тарифы.ОбъемЭнерг</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТарифыОбъемЭнергКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ТарифыОбъемЭнергРасширеннаяПодсказка" id="154"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СвОборудСправоч" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Св оборуд справоч</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Св оборуд справоч</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КодОборуд" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>5</v8:Length>
+							<v8:AllowedLength>Fixed</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаводНом" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заводской номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Заводской номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличЧасЭкспл" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часов эксплуатации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Часов эксплуатации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СвОборудПроизв" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Св оборуд произв</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Св оборуд произв</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Марка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Марка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Марка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Модель" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модель</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Модель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Алгоритм" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Алгоритм</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Алгоритм</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>4</v8:Length>
+							<v8:AllowedLength>Fixed</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВычислитМощн" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вычислительная мощность (хэшрейт)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Вычислительная мощность (хэшрейт)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>18</v8:Digits>
+							<v8:FractionDigits>14</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличЭнерг" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потребляемая энергия</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Потребляемая энергия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаводНом" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заводской номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Заводской номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличЧасЭкспл" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часов эксплуатации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Часов эксплуатации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СвДобытВалют" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о цифровой валюте</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Информация о цифровой валюте</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Описание" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Данные" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Данные</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПрОтсВотчер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цифровая валюта добывается  без использования watcher-link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Цифровая валюта добывается  без использования watcher-link</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаНаПул" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>watcher-link ссылка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>watcher-link ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1000</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Тарифы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Тарифы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Тариф" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тариф</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Тариф</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>5</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбъемЭнерг" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объем потребленной энергии</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Объем потребленной энергии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СвОборудСправочКоличЧасЭкспл</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СвОборудСправоч.КоличЧасЭкспл</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">2208</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветОшибкиВПротоколеБРО</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СвОборудПроизвКоличЧасЭкспл</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СвОборудПроизв.КоличЧасЭкспл</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">2208</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветОшибкиВПротоколеБРО</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СвОборудСправочКодОборуд</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СвОборудСправоч.КодОборуд</dcsset:left>
+						<dcsset:comparisonType>Like</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">%/ %</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветОшибкиВПротоколеБРО</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СвОборудПроизвАлгоритм</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СвОборудПроизв.Алгоритм</dcsset:left>
+						<dcsset:comparisonType>Like</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">%/ %</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветОшибкиВПротоколеБРО</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьВалюты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВалюты</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УдалитьВалюты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВалюты</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Ок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Добавить в отчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести данные в форму уведомления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Перенести данные в форму уведомления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Ок</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Проверить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Проверить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьСвОборудСправоч" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить сведения об оборудовании</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Очистить сведения об оборудовании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьСвОборудСправоч</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьСвОборудПроизв" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить сведения об оборудовании</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Очистить сведения об оборудовании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьСвОборудПроизв</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ДанныеДляРедактирования">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

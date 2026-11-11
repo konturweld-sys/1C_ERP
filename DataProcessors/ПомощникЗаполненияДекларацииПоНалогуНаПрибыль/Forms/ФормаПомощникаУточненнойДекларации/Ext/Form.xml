@@ -1,0 +1,1428 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник формирования уточненных деклараций по налогу на прибыль</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Wizard of generating updated income tax declarations</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОрганизацияПерерасчетаНалога" id="177">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация перерасчета налога</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Tax recalculation company</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОрганизацияПерерасчетаНалогаРасширеннаяПодсказка" id="178"/>
+			<ChildItems>
+				<InputField name="ОрганизацияПерерасчетаНалога" id="308">
+					<DataPath>ОрганизацияПерерасчетаНалога</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Company</v8:content>
+						</v8:item>
+					</Title>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ОрганизацияПерерасчетаНалогаКонтекстноеМеню" id="309"/>
+					<ExtendedTooltip name="ОрганизацияПерерасчетаНалогаРасширеннаяПодсказка" id="310"/>
+					<Events>
+						<Event name="StartChoice">ОрганизацияПерерасчетаНалогаНачалоВыбора</Event>
+						<Event name="Clearing">ОрганизацияПерерасчетаНалогаОчистка</Event>
+					</Events>
+				</InputField>
+				<Button name="ОбновитьСостояние" id="301">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьСостояние</CommandName>
+					<ExtendedTooltip name="ОбновитьСостояниеРасширеннаяПодсказка" id="302"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПредупреждениеВсеОрганизации" id="319">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предупреждение (все организации)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warning (all companies)</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПредупреждениеВсеОрганизацииРасширеннаяПодсказка" id="320"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаПредупреждениеВсеОрганизации" id="321">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка предупреждение все организации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Picture Warning all companies</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="КартинкаПредупреждениеВсеОрганизацииКонтекстноеМеню" id="322"/>
+					<ExtendedTooltip name="КартинкаПредупреждениеВсеОрганизацииРасширеннаяПодсказка" id="323"/>
+				</PictureDecoration>
+				<LabelField name="СостояниеОффлайновыхОперацийВсеОрганизации" id="324">
+					<DataPath>СостояниеОффлайновыхОперацийВсеОрганизации</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>80</Width>
+					<Height>3</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="СостояниеОффлайновыхОперацийВсеОрганизацииКонтекстноеМеню" id="325"/>
+					<ExtendedTooltip name="СостояниеОффлайновыхОперацийВсеОрганизацииРасширеннаяПодсказка" id="326"/>
+					<Events>
+						<Event name="URLProcessing">СостояниеОффлайновыхОперацийВсеОрганизацииОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСборКорректировок" id="184">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбор корректировок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Adjustments collection</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаСборКорректировокРасширеннаяПодсказка" id="185"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОткрытыйНаборКорректировок" id="186">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа открытый набор корректировок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Open adjustment set</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОткрытыйНаборКорректировокРасширеннаяПодсказка" id="187"/>
+					<ChildItems>
+						<LabelField name="ОткрытыйНаборКорректировок" id="188">
+							<DataPath>ОткрытыйНаборКорректировок</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>22</MaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ОткрытыйНаборКорректировокКонтекстноеМеню" id="189"/>
+							<ExtendedTooltip name="ОткрытыйНаборКорректировокРасширеннаяПодсказка" id="190"/>
+						</LabelField>
+						<Button name="ИзмененияОткрытогоНабораКорректировок" id="191">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ИзмененияОткрытогоНабораКорректировок</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Changes</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ИзмененияОткрытогоНабораКорректировокРасширеннаяПодсказка" id="192"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПредупреждение" id="311">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предупреждение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Warning</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПредупреждениеРасширеннаяПодсказка" id="312"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаПредупреждение" id="313">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка предупреждение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Warning picture</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="КартинкаПредупреждениеКонтекстноеМеню" id="314"/>
+							<ExtendedTooltip name="КартинкаПредупреждениеРасширеннаяПодсказка" id="315"/>
+						</PictureDecoration>
+						<LabelField name="СостояниеОффлайновыхОпераций" id="316">
+							<DataPath>СостояниеОффлайновыхОпераций</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>80</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<ContextMenu name="СостояниеОффлайновыхОперацийКонтекстноеМеню" id="317"/>
+							<ExtendedTooltip name="СостояниеОффлайновыхОперацийРасширеннаяПодсказка" id="318"/>
+							<Events>
+								<Event name="URLProcessing">СостояниеОффлайновыхОперацийОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ЗавершитьСборКорректировок" id="193">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗавершитьСборКорректировок</CommandName>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ExtendedTooltip name="ЗавершитьСборКорректировокРасширеннаяПодсказка" id="194">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;fontstyle -31&gt;&lt;fontsize 10&gt;Перейти к подготовке уточненных деклараций по&lt;/&gt;&lt;/&gt;
+&lt;fontstyle -31&gt;&lt;fontsize 10&gt;накопленным корректировкам налоговой базы.&lt;/&gt;&lt;/&gt;</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>&lt;fontstyle -31&gt;&lt;fontsize 10&gt;Go to preparation of updated declarations on&lt;/&gt;&lt;/&gt;
+&lt;fontstyle -31&gt;&lt;fontsize 10&gt;accumulated adjustments of tax base.&lt;/&gt;&lt;/&gt;</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодготовкаДекларации" id="195">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовка деклараций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Declaration preparation</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаПодготовкаДекларацииРасширеннаяПодсказка" id="196"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЗакрытыйНаборКорректировок" id="197">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа закрытый набор корректировок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Closed adjustment set</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗакрытыйНаборКорректировокРасширеннаяПодсказка" id="198"/>
+					<ChildItems>
+						<LabelField name="ЗакрытыйНаборКорректировок" id="199">
+							<DataPath>ЗакрытыйНаборКорректировок</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>27</MaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ЗакрытыйНаборКорректировокКонтекстноеМеню" id="200"/>
+							<ExtendedTooltip name="ЗакрытыйНаборКорректировокРасширеннаяПодсказка" id="201"/>
+						</LabelField>
+						<Button name="ИзмененияЗакрытогоНабораКорректировок" id="202">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ИзмененияЗакрытогоНабораКорректировок</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Changes</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ИзмененияЗакрытогоНабораКорректировокРасширеннаяПодсказка" id="203"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПредупреждениеВыполненияОперацийПрошлогоМесяца" id="327">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа предупреждение выполнения операций прошлого месяца</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Warning about performing previous month operations</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПредупреждениеВыполненияОперацийПрошлогоМесяцаРасширеннаяПодсказка" id="328"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаПредупреждениеВыполненияОперацийПрошлогоМесяца" id="329">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка предупреждение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Warning picture</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="КартинкаПредупреждениеВыполненияОперацийПрошлогоМесяцаКонтекстноеМеню" id="330"/>
+							<ExtendedTooltip name="КартинкаПредупреждениеВыполненияОперацийПрошлогоМесяцаРасширеннаяПодсказка" id="331"/>
+						</PictureDecoration>
+						<LabelField name="СостояниеВыполненияОперацийПрошлогоМесяца" id="332">
+							<DataPath>СостояниеВыполненияОперацийПрошлогоМесяца</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>50</Width>
+							<Height>3</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<ContextMenu name="СостояниеВыполненияОперацийПрошлогоМесяцаКонтекстноеМеню" id="333"/>
+							<ExtendedTooltip name="СостояниеВыполненияОперацийПрошлогоМесяцаРасширеннаяПодсказка" id="334"/>
+							<Events>
+								<Event name="URLProcessing">СостояниеВыполненияОперацийПрошлогоМесяцаОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПредупреждениеВыполненияОперацийТекущегоМесяца" id="335">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа предупреждение выполнения операций текущего месяца</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Warning about performing current month operations</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПредупреждениеВыполненияОперацийТекущегоМесяцаРасширеннаяПодсказка" id="336"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаПредупреждениеВыполненияОперацийТекущегоМесяца" id="337">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка предупреждение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Picture Warning</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="КартинкаПредупреждениеВыполненияОперацийТекущегоМесяцаКонтекстноеМеню" id="338"/>
+							<ExtendedTooltip name="КартинкаПредупреждениеВыполненияОперацийТекущегоМесяцаРасширеннаяПодсказка" id="339"/>
+						</PictureDecoration>
+						<LabelField name="СостояниеВыполненияОперацийТекущегоМесяца" id="340">
+							<DataPath>СостояниеВыполненияОперацийТекущегоМесяца</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>50</Width>
+							<Height>2</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<ContextMenu name="СостояниеВыполненияОперацийТекущегоМесяцаКонтекстноеМеню" id="341"/>
+							<ExtendedTooltip name="СостояниеВыполненияОперацийТекущегоМесяцаРасширеннаяПодсказка" id="342"/>
+							<Events>
+								<Event name="URLProcessing">СостояниеВыполненияОперацийТекущегоМесяцаОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПерерасчетНалогаНаПрибыль" id="204">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа перерасчет налога на прибыль</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Income tax recalculation</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПерерасчетНалогаНаПрибыльРасширеннаяПодсказка" id="205"/>
+					<ChildItems>
+						<Pages name="КартинкиПерерасчетНалогаНаПрибыль" id="206">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки перерасчет налога на прибыль</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures Income tax recalculation</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="КартинкиПерерасчетНалогаНаПрибыльРасширеннаяПодсказка" id="207"/>
+							<ChildItems>
+								<Page name="ПерерасчетНалогаНаПрибыльНеопределено" id="208">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет налога на прибыль неопределено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Income tax recalculation undefined</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПерерасчетНалогаНаПрибыльНеопределеноРасширеннаяПодсказка" id="209"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПерерасчетНалогаНаПрибыльНеопределено" id="210">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация перерасчет налога на прибыль неопределено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Income tax recalculation undefined</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Вопрос</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПерерасчетНалогаНаПрибыльНеопределеноКонтекстноеМеню" id="211"/>
+											<ExtendedTooltip name="ДекорацияПерерасчетНалогаНаПрибыльНеопределеноРасширеннаяПодсказка" id="212"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ПерерасчетНалогаНаПрибыльВыполненоУспешно" id="213">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет налога на прибыль выполнено успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Income tax recalculation completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПерерасчетНалогаНаПрибыльВыполненоУспешноРасширеннаяПодсказка" id="214"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПерерасчетНалогаНаПрибыльВыполненоУспешно" id="215">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация перерасчет налога на прибыль выполнено успешно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Income tax recalculation completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПерерасчетНалогаНаПрибыльВыполненоУспешноКонтекстноеМеню" id="216"/>
+											<ExtendedTooltip name="ДекорацияПерерасчетНалогаНаПрибыльВыполненоУспешноРасширеннаяПодсказка" id="217"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ПерерасчетНалогаНаПрибыльНеВыполнено" id="218">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет налога на прибыль не выполнено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Income tax recalculation not completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПерерасчетНалогаНаПрибыльНеВыполненоРасширеннаяПодсказка" id="219"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПерерасчетНалогаНаПрибыльНеВыполнено" id="220">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация перерасчет налога на прибыль не выполнено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Income tax recalculation not completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.НеВыполнено</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПерерасчетНалогаНаПрибыльНеВыполненоКонтекстноеМеню" id="221"/>
+											<ExtendedTooltip name="ДекорацияПерерасчетНалогаНаПрибыльНеВыполненоРасширеннаяПодсказка" id="222"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ПерерасчетНалогаНаПрибыльВыполненоСОшибками" id="223">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет налога на прибыль выполнено с ошибками</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Income tax recalculation completed with errors</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПерерасчетНалогаНаПрибыльВыполненоСОшибкамиРасширеннаяПодсказка" id="224"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПерерасчетНалогаНаПрибыльВыполненоСОшибками" id="225">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация перерасчет налога на прибыль выполнено с ошибками</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Income tax recalculation completed with errors</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоСОшибками</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПерерасчетНалогаНаПрибыльВыполненоСОшибкамиКонтекстноеМеню" id="226"/>
+											<ExtendedTooltip name="ДекорацияПерерасчетНалогаНаПрибыльВыполненоСОшибкамиРасширеннаяПодсказка" id="227"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="ДекорацияПерерасчетНалогаНаПрибыль" id="228">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перерасчет налога на прибыль</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Income tax recalculation</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПерерасчетНалогаНаПрибыльКонтекстноеМеню" id="229"/>
+							<ExtendedTooltip name="ДекорацияПерерасчетНалогаНаПрибыльРасширеннаяПодсказка" id="230"/>
+						</LabelDecoration>
+						<Button name="ВыполнитьПерерасчетНалога" id="231">
+							<Type>Hyperlink</Type>
+							<Width>10</Width>
+							<CommandName>Form.Command.ВыполнитьПерерасчетНалога</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Complete</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ВыполнитьПерерасчетНалогаРасширеннаяПодсказка" id="232"/>
+						</Button>
+						<LabelDecoration name="ДекорацияСправкиРасчеты" id="233">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перейти</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Go to</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ДекорацияСправкиРасчетыКонтекстноеМеню" id="234"/>
+							<ExtendedTooltip name="ДекорацияСправкиРасчетыРасширеннаяПодсказка" id="235"/>
+							<Events>
+								<Event name="Click">ДекорацияСправкиРасчетыНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКорректировкаРасчетовПоНалогам" id="236">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа корректировка расчетов по налогам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Adjustments of AR/AP accounting for taxes</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКорректировкаРасчетовПоНалогамРасширеннаяПодсказка" id="237"/>
+					<ChildItems>
+						<Pages name="КартинкиКорректировкаРасчетовПоНалогам" id="238">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки корректировка расчетов по налогам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures Adjustment of AR/AP accounting for taxes</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="КартинкиКорректировкаРасчетовПоНалогамРасширеннаяПодсказка" id="239"/>
+							<ChildItems>
+								<Page name="КорректировкаРасчетовПоНалогамНеопределено" id="240">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корректировка расчетов по налогам неопределено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Adjustment of AR/AP accounting for taxes undefined</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КорректировкаРасчетовПоНалогамНеопределеноРасширеннаяПодсказка" id="241"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКорректировкаРасчетовПоНалогамНеопределено" id="242">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация корректировка расчетов по налогам неопределено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Adjustment of AR/AP accounting for taxes undefined</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Вопрос</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияКорректировкаРасчетовПоНалогамНеопределеноКонтекстноеМеню" id="243"/>
+											<ExtendedTooltip name="ДекорацияКорректировкаРасчетовПоНалогамНеопределеноРасширеннаяПодсказка" id="244"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="КорректировкаРасчетовПоНалогамВыполненоУспешно" id="245">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корректировка расчетов по налогам выполнено успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Adjustment of AR/AP accounting for taxes completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="КорректировкаРасчетовПоНалогамВыполненоУспешноРасширеннаяПодсказка" id="246"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКорректировкаРасчетовПоНалогамВыполненоУспешно" id="247">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация корректировка расчетов по налогам выполнено успешно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Adjustment of AR/AP accounting for taxes completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияКорректировкаРасчетовПоНалогамВыполненоУспешноКонтекстноеМеню" id="248"/>
+											<ExtendedTooltip name="ДекорацияКорректировкаРасчетовПоНалогамВыполненоУспешноРасширеннаяПодсказка" id="249"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="КорректировкаРасчетовПоНалогамНеВыполнено" id="250">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корректировка расчетов по налогам не выполнено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Adjustment of AR/AP accounting for taxes not completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="КорректировкаРасчетовПоНалогамНеВыполненоРасширеннаяПодсказка" id="251"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКорректировкаРасчетовПоНалогамНеВыполнено" id="252">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация корректировка расчетов по налогам не выполнено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Adjustment of AR/AP accounting for taxes not completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.НеВыполнено</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияКорректировкаРасчетовПоНалогамНеВыполненоКонтекстноеМеню" id="253"/>
+											<ExtendedTooltip name="ДекорацияКорректировкаРасчетовПоНалогамНеВыполненоРасширеннаяПодсказка" id="254"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="КорректировкаРасчетовПоНалогамВыполненоСОшибками" id="255">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корректировка расчетов по налогам выполнено с ошибками</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Adjustment of AR/AP accounting for taxes completed with errors</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="КорректировкаРасчетовПоНалогамВыполненоСОшибкамиРасширеннаяПодсказка" id="256"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКорректировкаРасчетовПоНалогамВыполненоСОшибками" id="257">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация корректировка расчетов по налогам выполнено с ошибками</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Adjustment of AR/AP accounting for taxes completed with errors</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоСОшибками</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияКорректировкаРасчетовПоНалогамВыполненоСОшибкамиКонтекстноеМеню" id="258"/>
+											<ExtendedTooltip name="ДекорацияКорректировкаРасчетовПоНалогамВыполненоСОшибкамиРасширеннаяПодсказка" id="259"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="ДекорацияКорректировкаРасчетовПоНалогам" id="260">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Корректировка расчетов по налогам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Adjustment of tax AR/AP accounting</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияКорректировкаРасчетовПоНалогамКонтекстноеМеню" id="261"/>
+							<ExtendedTooltip name="ДекорацияКорректировкаРасчетовПоНалогамРасширеннаяПодсказка" id="262">
+								<Width>33</Width>
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<Button name="СоздатьПерезаполнитьКорректировкуРасчетовПоНалогам" id="263">
+							<Type>Hyperlink</Type>
+							<Width>10</Width>
+							<CommandName>Form.Command.СоздатьПерезаполнитьКорректировкуРасчетовПоНалогам</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Create</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СоздатьПерезаполнитьКорректировкуРасчетовПоНалогамРасширеннаяПодсказка" id="264"/>
+						</Button>
+						<Button name="ОткрытьКорректировкуРасчетовПоНалогам" id="265">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьКорректировкуРасчетовПоНалогам</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробнее</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Details</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьКорректировкуРасчетовПоНалогамРасширеннаяПодсказка" id="266"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСуммаНалогаКДоплате" id="267">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сумма налога к доплате</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Tax amount to be paid additionally</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммаНалогаКДоплатеРасширеннаяПодсказка" id="268"/>
+					<ChildItems>
+						<PictureField name="КартинкаСуммаНалогаКДоплате" id="269">
+							<DataPath>ИндексКартинкиСуммаНалогаКДоплате</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>2</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>2</MaxWidth>
+							<Height>1</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СтатусыВыполненияЭтаповЗакрытияМесяца</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="КартинкаСуммаНалогаКДоплатеКонтекстноеМеню" id="270"/>
+							<ExtendedTooltip name="КартинкаСуммаНалогаКДоплатеРасширеннаяПодсказка" id="271"/>
+						</PictureField>
+						<LabelDecoration name="ДекорацияСуммаНалогаКДоплате" id="272">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По результатам перерасчета налога сумма налога к доплате</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Tax amount to be paid based on tax recalculation results</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="ДекорацияСуммаНалогаКДоплатеКонтекстноеМеню" id="273"/>
+							<ExtendedTooltip name="ДекорацияСуммаНалогаКДоплатеРасширеннаяПодсказка" id="274">
+								<Width>31</Width>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<Button name="ПополнитьЕНС" id="275">
+							<Type>Hyperlink</Type>
+							<Width>10</Width>
+							<CommandName>Form.Command.ПополнитьЕНС</CommandName>
+							<ExtendedTooltip name="ПополнитьЕНСРасширеннаяПодсказка" id="276"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДекларации" id="277">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа декларации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Declarations</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДекларацииРасширеннаяПодсказка" id="278"/>
+					<ChildItems>
+						<Pages name="КартинкиДекларации" id="279">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки декларации</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures Declarations</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="КартинкиДекларацииРасширеннаяПодсказка" id="280"/>
+							<ChildItems>
+								<Page name="ДекларацииНеопределено" id="281">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декларации неопределено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Declarations undefined</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ДекларацииНеопределеноРасширеннаяПодсказка" id="282"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияДекларацииНеопределено" id="283">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация декларации неопределено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Declarations undefined</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Вопрос</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияДекларацииНеопределеноКонтекстноеМеню" id="284"/>
+											<ExtendedTooltip name="ДекорацияДекларацииНеопределеноРасширеннаяПодсказка" id="285"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ДекларацииВыполненоУспешно" id="286">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декларации выполнено успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Declarations completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ДекларацииВыполненоУспешноРасширеннаяПодсказка" id="287"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияДекларацииВыполненоУспешно" id="288">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация декларации выполнено успешно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Declarations completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияДекларацииВыполненоУспешноКонтекстноеМеню" id="289"/>
+											<ExtendedTooltip name="ДекорацияДекларацииВыполненоУспешноРасширеннаяПодсказка" id="290"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ДекларацииНеВыполнено" id="291">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декларации не выполнено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Declarations not completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ДекларацииНеВыполненоРасширеннаяПодсказка" id="292"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияДекларацииНеВыполнено" id="293">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация декларации не выполнено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Declarations not completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.НеВыполнено</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияДекларацииНеВыполненоКонтекстноеМеню" id="294"/>
+											<ExtendedTooltip name="ДекорацияДекларацииНеВыполненоРасширеннаяПодсказка" id="295"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="ДекорацияДекларации" id="296">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декларации</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Declarations</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="ДекорацияДекларацииКонтекстноеМеню" id="297"/>
+							<ExtendedTooltip name="ДекорацияДекларацииРасширеннаяПодсказка" id="298"/>
+						</LabelDecoration>
+						<Button name="ОткрытьСписокУточненныхДеклараций" id="299">
+							<Type>Hyperlink</Type>
+							<Width>10</Width>
+							<CommandName>Form.Command.ОткрытьСписокУточненныхДеклараций</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробнее</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Details</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьСписокУточненныхДекларацийРасширеннаяПодсказка" id="300"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОткрытыйНаборКорректировок" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открытый набор корректировок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open adjustment set</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КорректировкиПрошлыхПериодовНУ</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗакрытыйНаборКорректировок" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрытый набор корректировок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Closed adjustment set</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КорректировкиПрошлыхПериодовНУ</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КорректировкаРасчетовПоНалогам" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка расчетов по налогам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Adjustment of tax AR/AP accounting</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.КорректировкаРасчетовПоНалогам</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаПерерасчетаНалога" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма перерасчета налога</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tax recalculation amount</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияПерерасчетаНалога" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация перерасчета налога</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tax recalculation company</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИндексКартинкиСуммаНалогаКДоплате" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс картинки сумма налога к доплате</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Picture index tax amount to be paid additionally</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПервыйМесяцПерерасчетаНалога" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первый месяц перерасчета налога</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>First month of tax recalculation</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеОффлайновыхОпераций" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние оффлайновых операций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Offline transaction state</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеОффлайновыхОперацийВсеОрганизации" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние оффлайновых операций все организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Offline transaction state all companies</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументПерерасчетаНалога" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ перерасчета налога</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tax recalculation document</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.РегламентнаяОперация</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеВыполненияОперацийПрошлогоМесяца" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние выполнения операций прошлого месяца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>State of performing previous month operations</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеВыполненияОперацийТекущегоМесяца" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние выполнения операций текущего месяца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>State of performing current month operations</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗавершитьСборКорректировок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить сбор корректировок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Complete adjustment collection</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗавершитьСборКорректировок</Action>
+		</Command>
+		<Command name="ИзмененияЗакрытогоНабораКорректировок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменения закрытого набора корректировок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Changes of closed adjustment set</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзмененияЗакрытогоНабораКорректировок</Action>
+		</Command>
+		<Command name="ИзмененияОткрытогоНабораКорректировок" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменения открытого набора корректировок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Changes of open adjustment set</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзмененияОткрытогоНабораКорректировок</Action>
+		</Command>
+		<Command name="ОбновитьСостояние" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить состояние</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update state</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСостояние</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОткрытьКорректировкуРасчетовПоНалогам" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть корректировку расчетов по налогам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open adjustment of AR/AP accounting for taxes</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьКорректировкуРасчетовПоНалогам</Action>
+		</Command>
+		<Command name="ОткрытьСписокУточненныхДеклараций" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список уточненных деклараций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open list of updated declarations</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьСписокУточненныхДеклараций</Action>
+		</Command>
+		<Command name="ПополнитьЕНС" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пополнить ЕНС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Top up UTA</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПополнитьЕНС</Action>
+		</Command>
+		<Command name="СоздатьПерезаполнитьКорректировкуРасчетовПоНалогам" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать перезаполнить корректировку расчетов по налогам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create refill adjustment of AR/AP accounting for taxes</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СоздатьПерезаполнитьКорректировкуРасчетовПоНалогам</Action>
+		</Command>
+		<Command name="ВыполнитьПерерасчетНалога" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить перерасчет налога</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Recalculate tax</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьПерерасчетНалога</Action>
+		</Command>
+	</Commands>
+</Form>

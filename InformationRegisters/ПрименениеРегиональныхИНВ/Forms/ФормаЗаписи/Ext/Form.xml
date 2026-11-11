@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Региональный инвестиционный налоговый вычет</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Regional investment tax deduction</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="4">
+			<DataPath>Запись.Организация</DataPath>
+			<Visible>false</Visible>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаПрименениеРИНВ" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа применение РИНВ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Regional investment tax deduction application</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа применение РИНВ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Regional investment tax deduction application</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПрименениеРИНВРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<CheckBoxField name="ПрименяетсяРегиональныйИНВ" id="10">
+					<DataPath>Запись.ПрименяетсяРегиональныйИНВ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применяется региональный инвестиционный налоговый вычет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Regional investment tax deduction is applied</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименяетсяРегиональныйИНВКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПрименяетсяРегиональныйИНВРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">ПрименяетсяРегиональныйИНВПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>с</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>from</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРегион" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа регион</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Region group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа регион</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Region group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРегионРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<InputField name="КодРегионаСтрока" id="68">
+					<DataPath>КодРегионаСтрока</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регион</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Region</v8:content>
+						</v8:item>
+					</Title>
+					<ChoiceButton>false</ChoiceButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>77 - Москва г</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>77 - Moscow</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">77</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>78 - Санкт-Петербург г</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>78 - Saint Petersburg</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">78</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>01 - Адыгея Респ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>01 - Adygea Republic</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">01</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>02 - Башкортостан Респ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>02 - Republic of Bashkortostan</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">02</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>03 - Бурятия Респ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>03 - Republic of Buryatia</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">03</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>04 - Алтай Респ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>04 - Altai Republic</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">04</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="КодРегионаСтрокаКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="КодРегионаСтрокаРасширеннаяПодсказка" id="70"/>
+					<Events>
+						<Event name="OnChange">КодРегионаСтрокаПриИзменении</Event>
+						<Event name="StartChoice">КодРегионаСтрокаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗаконСубъекта" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа закон субъекта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Territorial entity law</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа закон субъекта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Territorial entity law</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаконСубъектаРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаконСубъекта" id="81">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закон субъекта РФ, которым
+установлено право на налоговый вычет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Law of the RF territorial entity, which
+establishes the right to a tax deduction</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаконСубъектаКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ДекорацияЗаконСубъектаРасширеннаяПодсказка" id="83"/>
+				</LabelDecoration>
+				<InputField name="НомерЗаконаСубъекта" id="84">
+					<DataPath>Запись.НомерЗаконаСубъекта</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерЗаконаСубъектаКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="НомерЗаконаСубъектаРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="ДатаЗаконаСубъекта" id="87">
+					<DataPath>Запись.ДатаЗаконаСубъекта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>dated</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаЗаконаСубъектаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ДатаЗаконаСубъектаРасширеннаяПодсказка" id="89"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСрокПереноса" id="90">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок переноса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Carryforward period</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок переноса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Carryforward period</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСрокПереносаРасширеннаяПодсказка" id="91"/>
+			<ChildItems>
+				<InputField name="СрокПереносаВычета" id="19">
+					<DataPath>Запись.СрокПереносаВычета</DataPath>
+					<Width>5</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СрокПереносаВычетаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СрокПереносаВычетаРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<LabelDecoration name="ДекорацияСрокПереносаВычета" id="49">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>лет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>years</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ДекорацияСрокПереносаВычетаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ДекорацияСрокПереносаВычетаРасширеннаяПодсказка" id="51">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вычет может быть использован для уменьшения суммы налога (авансового платежа), в последующих налоговых периодах, но не более чем в течение периода срока переноса вычета. (п. 9 ст. 286.1 НК РФ)</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Deduction may be used to reduce the tax (advance payment) amount in subsequent tax periods, but only within the deduction carryforward period (cl. 9 art. 286.1 of the Tax Code of the Russian Federation)</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСрокФактическогоИспользования" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок фактического использования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Actual useful life</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок фактического использования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Actual useful life</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСрокФактическогоИспользованияРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<InputField name="МинимальныйСрокФактическогоИспользования" id="71">
+					<DataPath>Запись.МинимальныйСрокФактическогоИспользования</DataPath>
+					<Width>5</Width>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МинимальныйСрокФактическогоИспользованияКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="МинимальныйСрокФактическогоИспользованияРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<LabelDecoration name="ДекорацияСрокФактическогоИспользования" id="76">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>лет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>years</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ДекорацияСрокФактическогоИспользованияКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ДекорацияСрокФактическогоИспользованияРасширеннаяПодсказка" id="78">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При реализации или ином выбытии объекта основных средств в отношении которых налогоплательщик использовал право на применение инвестиционного налогового вычета до истечения срока их полезного использования, если иной срок в отношении объектов основных средств не определен решением субъекта Российской Федерации, сумма налога, не уплаченная в связи с применением такого вычета подлежит восстановлению и уплате в бюджет с уплатой соответствующих сумм пеней. (п. 12 ст. 286.1 НК РФ)</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>In case of sale or other disposal of a fixed asset in respect of which the taxpayer has used the right to apply an investment tax deduction before the expiration of their useful life, unless another useful life for fixed assets is determined by a decision of a territorial entity of the Russian Federation, the amount of tax not paid in connection with the application of such deduction is subject to restoration and payment to the budget with the corresponding amounts of penalties (cl 12 art. 286.1 of the Tax Code of the Russian Federation)</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРегиональныйИНВ" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Региональный бюджет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Regional budget</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа региональный ИНВ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Regional investment tax deduction</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаРегиональныйИНВРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДоляРасходов" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доля расходов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Expense percentage</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доля расходов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Expense percentage</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДоляРасходовРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<InputField name="ДоляРасходовИНВ_РБ" id="13">
+							<DataPath>Запись.ДоляРасходовИНВ_РБ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доля суммы расходов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Expense amount share</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>false</ChoiceButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДоляРасходовИНВ_РБКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ДоляРасходовИНВ_РБРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияДоляРасходовИНВ_РБ" id="32">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>%</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>%</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ДекорацияДоляРасходовИНВ_РБКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДекорацияДоляРасходовИНВ_РБРасширеннаяПодсказка" id="34">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Размер вычета определяется как доля от суммы расходов, составляющих первоначальную стоимость основного средства / нематериального актива или суммы расходов, указанных в п. 2 ст. 257 НК РФ (п. 2 ст. 286.1 НК РФ)</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Deduction amount is defined as a share of the expense amount that makes up the initial cost of a fixed/intangible asset or the expense amount specified in cl. 2 art. 257 of the Tax Code of the Russian Federation (cl. 2 art. 286.1 of the Tax Code of the Russian Federation)</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМинимальнаяСтавкаИНВ" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа минимальная ставка ИНВ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Minimum investment tax deduction rate</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа минимальная ставка ИНВ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Minimum investment tax deduction rate</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМинимальнаяСтавкаИНВРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<InputField name="МинимальнаяСтавкаИНВ" id="16">
+							<DataPath>Запись.МинимальнаяСтавкаИНВ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Минимальная ставка налога</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Minimum tax rate</v8:content>
+								</v8:item>
+							</Title>
+							<Width>5</Width>
+							<ChoiceButton>false</ChoiceButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МинимальнаяСтавкаИНВКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="МинимальнаяСтавкаИНВРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияМинимальнаяСтавкаИНВ" id="37">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>%</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>%</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ДекорацияМинимальнаяСтавкаИНВКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ДекорацияМинимальнаяСтавкаИНВРасширеннаяПодсказка" id="39">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма налога (авансового платежа), подлежащая зачислению в региональный бюджет, в результате уменьшения на вычет не может быть ниже суммы налога, исчисленной по минимальной ставке. (п. 2.1 ст. 286.1 НК РФ)</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Amount of tax (advance payment) to be credited to the regional budget as a result of the reduction for deduction cannot be lower than the amount of tax calculated at the minimum rate (cl. 2.1 art. 286.1 of the Tax Code of the Russian Federation).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрименяетсяФедеральныйИНВ" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Федеральный бюджет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Federal budget</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа применяется федеральный ИНВ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Federal investment tax deduction is applied</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаПрименяетсяФедеральныйИНВРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<CheckBoxField name="ПрименяетсяФедеральныйИНВ" id="22">
+					<DataPath>Запись.ПрименяетсяФедеральныйИНВ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применяется региональный инвестиционный налоговый (федеральный бюджет)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Regional investment tax deduction (federal budget) is applied</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименяетсяФедеральныйИНВКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПрименяетсяФедеральныйИНВРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ПрименяетсяФедеральныйИНВПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаДоляРасходовИНВ_ФБ" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доля расходов ИНВ ФБ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Expense percentage of investment tax deduction FB</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доля расходов ИНВ ФБ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Expense percentage of investment tax deduction FB</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДоляРасходовИНВ_ФБРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<InputField name="ДоляРасходовИНВ_ФБ" id="25">
+							<DataPath>Запись.ДоляРасходовИНВ_ФБ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доля суммы расходов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Expense amount share</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>false</ChoiceButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДоляРасходовИНВ_ФБКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ДоляРасходовИНВ_ФБРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияДоляРасходовИНВ_ФБ" id="44">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>%</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>%</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ДекорацияДоляРасходовИНВ_ФБКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ДекорацияДоляРасходовИНВ_ФБРасширеннаяПодсказка" id="46">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Размер вычета определяется как доля от суммы расходов, составляющих первоначальную стоимость основного средства / нематериального актива или суммы расходов, указанных в п. 2 ст. 257 НК РФ (п. 3 ст. 286.1 НК РФ)</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Deduction amount is defined as a share of the expense amount that makes up the initial cost of a fixed/intangible asset or the expense amount specified in cl. 2 art. 257 of the Tax Code of the Russian Federation (cl. 3 art. 286.1 of the Tax Code of the Russian Federation)</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПрименениеРегиональныхИНВ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокРегионов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список регионов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List of regions</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодРегионаСтрока" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код региона строка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Region code string</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

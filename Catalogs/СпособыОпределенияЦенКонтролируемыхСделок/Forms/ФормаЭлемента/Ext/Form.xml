@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<UsualGroup name="ГруппаПризнакОпределенияЦены" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак определения цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pricing indicator </v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПризнакОпределенияЦеныРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<CheckBoxField name="ЦенаЯвляетсяРегулируемой" id="3">
+					<DataPath>Объект.ЦенаЯвляетсяРегулируемой</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена является регулируемой (по ст.105.4 НК РФ)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>The price is regulated (acc. to art.105.4 of the TC of the RF)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЦенаЯвляетсяРегулируемойКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ЦенаЯвляетсяРегулируемойРасширеннаяПодсказка" id="42"/>
+				</CheckBoxField>
+				<InputField name="КомментарийКПризнакуОпределенияЦеныСделки" id="32">
+					<DataPath>Объект.КомментарийКПризнакуОпределенияЦеныСделки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Comment</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий к регулированию цены</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Comment to price regulation</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КомментарийКПризнакуОпределенияЦеныСделкиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КомментарийКПризнакуОпределенияЦеныСделкиРасширеннаяПодсказка" id="43"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКодов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кодов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Code group</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодовРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКодОпределенияЦеныСделки" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Определение цены сделки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Transaction pricing</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКодОпределенияЦеныСделкиРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="КодОпределенияЦеныСделки" id="5">
+							<DataPath>Объект.КодОпределенияЦеныСделки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="КодОпределенияЦеныСделкиКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="КодОпределенияЦеныСделкиРасширеннаяПодсказка" id="46"/>
+						</InputField>
+						<InputField name="КомментарийККодуОпределенияЦеныСделки" id="36">
+							<DataPath>Объект.КомментарийККодуОпределенияЦеныСделки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Comment</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий к определению цены</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Comment to pricing</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="КомментарийККодуОпределенияЦеныСделкиКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="КомментарийККодуОпределенияЦеныСделкиРасширеннаяПодсказка" id="47"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМетодЦенообразования" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Методы ценообразования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pricing methods</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<United>false</United>
+			<ExtendedTooltip name="ГруппаМетодЦенообразованияРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКодМетода" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код метода</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Method code</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКодМетодаРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<InputField name="КодМетодаЦенообразования" id="7">
+							<DataPath>Объект.КодМетодаЦенообразования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Code</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="КодМетодаЦенообразованияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="КодМетодаЦенообразованияРасширеннаяПодсказка" id="49"/>
+							<Events>
+								<Event name="OnChange">КодМетодаЦенообразованияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КомментарийКМетодуЦенообразования" id="38">
+							<DataPath>Объект.КомментарийКМетодуЦенообразования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Comment</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий к методу ценообразования</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Comment to pricing method</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="КомментарийКМетодуЦенообразованияКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="КомментарийКМетодуЦенообразованияРасширеннаяПодсказка" id="50"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМетодСопоставимыхЦен" id="103">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метод сопоставимых цен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Comparable price method</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМетодСопоставимыхЦенРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<InputField name="ИсточникИнформацииСопоставимыхЦен" id="105">
+							<DataPath>Объект.СвойстваЦенообразования[0].ИсточникИнформацииСопоставимыхЦен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Источник информации</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Information source</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ИсточникИнформацииСопоставимыхЦенКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ИсточникИнформацииСопоставимыхЦенРасширеннаяПодсказка" id="107"/>
+						</InputField>
+						<InputField name="НаименованиеКотировкиСопоставимыхЦен" id="108">
+							<DataPath>Объект.СвойстваЦенообразования[0].НаименованиеКотировкиСопоставимыхЦен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование котировки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Quotation description</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НаименованиеКотировкиСопоставимыхЦенКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="НаименованиеКотировкиСопоставимыхЦенРасширеннаяПодсказка" id="110"/>
+						</InputField>
+						<InputField name="ПорядокПримененияКотировкиСопоставимыхЦен" id="111">
+							<DataPath>Объект.СвойстваЦенообразования[0].ПорядокПримененияКотировкиСопоставимыхЦен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Порядок применения котировки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Quotation application procedure</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПорядокПримененияКотировкиСопоставимыхЦенКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="ПорядокПримененияКотировкиСопоставимыхЦенРасширеннаяПодсказка" id="113"/>
+						</InputField>
+						<InputField name="НаименованиеДокументаЦеныСопоставимыхЦен" id="114">
+							<DataPath>Объект.СвойстваЦенообразования[0].НаименованиеДокументаЦеныСопоставимыхЦен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование документа,
+которым фиксируется цена</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Description of the document
+that fixes the price</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НаименованиеДокументаЦеныСопоставимыхЦенКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="НаименованиеДокументаЦеныСопоставимыхЦенРасширеннаяПодсказка" id="116"/>
+						</InputField>
+						<InputField name="НаименованиеКорректировкиДляСопоставимостиСопоставимыхЦен" id="117">
+							<DataPath>Объект.СвойстваЦенообразования[0].НаименованиеКорректировкиДляСопоставимостиСопоставимыхЦен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование корректировки
+для сопоставимости</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Description of the adjustment
+for comparability</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НаименованиеКорректировкиДляСопоставимостиСопоставимыхЦенКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="НаименованиеКорректировкиДляСопоставимостиСопоставимыхЦенРасширеннаяПодсказка" id="119"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИнформацияПоМетодам02_04" id="63">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация по методам 02-04</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Information on methods 02-04</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнформацияПоМетодам02_04РасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<InputField name="ПоказательРентабельности" id="65">
+							<DataPath>Объект.СвойстваЦенообразования[0].ПоказательРентабельности</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показатель рентабельности</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Profitability indicator</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПоказательРентабельностиКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="ПоказательРентабельностиРасширеннаяПодсказка" id="67"/>
+						</InputField>
+						<InputField name="ТестируемаяСторона" id="68">
+							<DataPath>Объект.СвойстваЦенообразования[0].ТестируемаяСторона</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тестируемая сторона</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Side to test</v8:content>
+								</v8:item>
+							</Title>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТестируемаяСторонаКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ТестируемаяСторонаРасширеннаяПодсказка" id="70"/>
+						</InputField>
+						<InputField name="Рентабельность" id="71">
+							<DataPath>Объект.СвойстваЦенообразования[0].Рентабельность</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рентабельность</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Profitability</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>false</ChoiceButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РентабельностьКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="РентабельностьРасширеннаяПодсказка" id="73"/>
+						</InputField>
+						<InputField name="РыночнаяРентабельность" id="74">
+							<DataPath>Объект.СвойстваЦенообразования[0].РыночнаяРентабельность</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рыночная рентабельность</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Market profitability</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>false</ChoiceButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РыночнаяРентабельностьКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="РыночнаяРентабельностьРасширеннаяПодсказка" id="76"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМетодРаспределенияПрибыли" id="77">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метод распределения прибыли</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Profit allocation method</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМетодРаспределенияПрибылиРасширеннаяПодсказка" id="78"/>
+					<ChildItems>
+						<InputField name="ОписаниеМетодаРаспределенияПрибыли" id="79">
+							<DataPath>Объект.СвойстваЦенообразования[0].ОписаниеМетодаРаспределенияПрибыли</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание метода</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Method details</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОписаниеМетодаРаспределенияПрибылиКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ОписаниеМетодаРаспределенияПрибылиРасширеннаяПодсказка" id="81"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКомбинацияМетодов" id="82">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комбинация методов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Method combination</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомбинацияМетодовРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<Table name="СвойстваЦенообразования" id="84">
+							<Representation>List</Representation>
+							<Height>5</Height>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СвойстваЦенообразования</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СвойстваЦенообразованияКонтекстноеМеню" id="85"/>
+							<AutoCommandBar name="СвойстваЦенообразованияКоманднаяПанель" id="86"/>
+							<ExtendedTooltip name="СвойстваЦенообразованияРасширеннаяПодсказка" id="87"/>
+							<SearchStringAddition name="СвойстваЦенообразованияСтрокаПоиска" id="88">
+								<AdditionSource>
+									<Item>СвойстваЦенообразования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвойстваЦенообразованияСтрокаПоискаКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="СвойстваЦенообразованияСтрокаПоискаРасширеннаяПодсказка" id="90"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СвойстваЦенообразованияСостояниеПросмотра" id="91">
+								<AdditionSource>
+									<Item>СвойстваЦенообразования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвойстваЦенообразованияСостояниеПросмотраКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="СвойстваЦенообразованияСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СвойстваЦенообразованияУправлениеПоиском" id="94">
+								<AdditionSource>
+									<Item>СвойстваЦенообразования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СвойстваЦенообразованияУправлениеПоискомКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="СвойстваЦенообразованияУправлениеПоискомРасширеннаяПодсказка" id="96"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СвойстваЦенообразованияВыбор</Event>
+								<Event name="BeforeAddRow">СвойстваЦенообразованияПередНачаломДобавления</Event>
+								<Event name="BeforeRowChange">СвойстваЦенообразованияПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СвойстваЦенообразованияКодМетодаЦенообразования" id="123">
+									<DataPath>Объект.СвойстваЦенообразования.КодМетодаЦенообразования</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Код метода</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Method code</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СвойстваЦенообразованияКодМетодаЦенообразованияКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="СвойстваЦенообразованияКодМетодаЦенообразованияРасширеннаяПодсказка" id="125"/>
+								</InputField>
+								<InputField name="СвойстваЦенообразованияОписаниеМетода" id="126">
+									<DataPath>Объект.СвойстваЦенообразования.ОписаниеМетода</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+									<ContextMenu name="СвойстваЦенообразованияОписаниеМетодаКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="СвойстваЦенообразованияОписаниеМетодаРасширеннаяПодсказка" id="128"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИсточникиИнформации" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источники информации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sources of information</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаИсточникиИнформацииРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<CheckBoxField name="ИсточникИнформации251" id="13">
+					<DataPath>Объект.ИсточникИнформации251</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации251КонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ИсточникИнформации251РасширеннаяПодсказка" id="52"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации252" id="15">
+					<DataPath>Объект.ИсточникИнформации252</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации252КонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ИсточникИнформации252РасширеннаяПодсказка" id="53"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации253" id="17">
+					<DataPath>Объект.ИсточникИнформации253</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<TitleHeight>1</TitleHeight>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации253КонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ИсточникИнформации253РасширеннаяПодсказка" id="54"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации254" id="19">
+					<DataPath>Объект.ИсточникИнформации254</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации254КонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ИсточникИнформации254РасширеннаяПодсказка" id="55"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации255" id="21">
+					<DataPath>Объект.ИсточникИнформации255</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации255КонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ИсточникИнформации255РасширеннаяПодсказка" id="56"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации256" id="23">
+					<DataPath>Объект.ИсточникИнформации256</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации256КонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ИсточникИнформации256РасширеннаяПодсказка" id="57"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации257" id="25">
+					<DataPath>Объект.ИсточникИнформации257</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации257КонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ИсточникИнформации257РасширеннаяПодсказка" id="58"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации258" id="27">
+					<DataPath>Объект.ИсточникИнформации258</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации258КонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ИсточникИнформации258РасширеннаяПодсказка" id="59"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсточникИнформации259" id="29">
+					<DataPath>Объект.ИсточникИнформации259</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсточникИнформации259КонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ИсточникИнформации259РасширеннаяПодсказка" id="60"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СпособыОпределенияЦенКонтролируемыхСделок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.СвойстваЦенообразования">
+					<Column name="ОписаниеМетода" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Описание метода</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Method details</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

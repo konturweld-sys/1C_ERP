@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>История настроек счетов учета</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>History of ledger account settings</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройкиОтбора" id="46">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиОтбораРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаБыстрыеОтборы" id="48">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаБыстрыеОтборыРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновныеОтборы" id="50">
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОсновныеОтборыРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<InputField name="ОтборВидСчета" id="66">
+									<DataPath>ВидСчета</DataPath>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ОтборВидСчетаКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ОтборВидСчетаРасширеннаяПодсказка" id="68"/>
+									<Events>
+										<Event name="OnChange">ОтборВидСчетаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОтборАналитикаУчета" id="69">
+									<DataPath>АналитикаУчета</DataPath>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ОтборАналитикаУчетаКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ОтборАналитикаУчетаРасширеннаяПодсказка" id="71"/>
+									<Events>
+										<Event name="OnChange">ОтборАналитикаУчетаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтборИсключений" id="52">
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборИсключенийРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<InputField name="ОтборОрганизация" id="72">
+									<DataPath>Организация</DataPath>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ОтборОрганизацияКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ОтборОрганизацияРасширеннаяПодсказка" id="74"/>
+									<Events>
+										<Event name="OnChange">ОтборОрганизацияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОтборМестоУчета" id="75">
+									<DataPath>МестоУчета</DataPath>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ОтборМестоУчетаКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ОтборМестоУчетаРасширеннаяПодсказка" id="77"/>
+									<Events>
+										<Event name="OnChange">ОтборМестоУчетаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтборВспомогательные" id="54">
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборВспомогательныеРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОтборРежимаНастройки" id="56">
+									<Width>35</Width>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<TitleDataPath>РежимНастройкиСтрокой</TitleDataPath>
+									<ExtendedTooltip name="ГруппаОтборРежимаНастройкиРасширеннаяПодсказка" id="57"/>
+									<ChildItems>
+										<RadioButtonField name="РежимНастройки" id="60">
+											<DataPath>РежимНастройки</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Все</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>All</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Общие</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Common</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Исключения</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Exceptions</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">2</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="РежимНастройкиКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="РежимНастройкиРасширеннаяПодсказка" id="62"/>
+											<Events>
+												<Event name="OnChange">РежимНастройкиПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОтборЗадолженности" id="58">
+									<Width>35</Width>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<TitleDataPath>ВидЗадолженностиСтрокой</TitleDataPath>
+									<ExtendedTooltip name="ГруппаОтборЗадолженностиРасширеннаяПодсказка" id="59"/>
+									<ChildItems>
+										<RadioButtonField name="ВидЗадолженности" id="63">
+											<DataPath>ВидЗадолженности</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Обе</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Both</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Краткосрочная</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Short-term</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Долгосрочная</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Long-term </v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">2</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ВидЗадолженностиКонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="ВидЗадолженностиРасширеннаяПодсказка" id="65"/>
+											<Events>
+												<Event name="OnChange">ВидЗадолженностиПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>User settings group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>User settings group</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+					<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="Период" id="40">
+					<DataPath>Список.Период</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<LabelField name="ВидСчета" id="16">
+					<DataPath>Список.ВидСчета</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ВидСчетаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВидСчетаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Организация" id="19">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="АналитикаУчета" id="22">
+					<DataPath>Список.АналитикаУчета</DataPath>
+					<ContextMenu name="АналитикаУчетаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="АналитикаУчетаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="МестоУчета" id="25">
+					<DataPath>Список.МестоУчета</DataPath>
+					<ContextMenu name="МестоУчетаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="МестоУчетаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Долгосрочный" id="34">
+					<DataPath>Список.Долгосрочный</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ДолгосрочныйКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ДолгосрочныйРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<InputField name="СчетУчета" id="28">
+					<DataPath>Список.СчетУчета</DataPath>
+					<ContextMenu name="СчетУчетаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СчетУчетаРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<LabelField name="Субконто" id="31">
+					<DataPath>Список.Субконто</DataPath>
+					<ContextMenu name="СубконтоКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СубконтоРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="ОтноситсяКМалоценнымТМЦ" id="37">
+					<DataPath>Список.ОтноситсяКМалоценнымТМЦ</DataPath>
+					<ContextMenu name="ОтноситсяКМалоценнымТМЦКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОтноситсяКМалоценнымТМЦРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<CheckBoxField name="СчетПоУмолчанию" id="43">
+					<DataPath>Список.СчетПоУмолчанию</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СчетПоУмолчаниюКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СчетПоУмолчаниюРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ОбщиеНастройки.Период КАК НачалоДействия,
+	МИНИМУМ(ЕСТЬNULL(СледующиеОбщиеНастройки.Период, ДАТАВРЕМЯ(2222, 2, 2))) КАК ОкончаниеДействия,
+	ОбщиеНастройки.АналитикаУчета КАК АналитикаУчета,
+	ОбщиеНастройки.ВидСчета КАК ВидСчета,
+	ОбщиеНастройки.Долгосрочный КАК Долгосрочный,
+	ОбщиеНастройки.СчетУчета КАК СчетУчета,
+	ОбщиеНастройки.Субконто КАК Субконто,
+	ОбщиеНастройки.ОтноситсяКМалоценнымТМЦ КАК ОтноситсяКМалоценнымТМЦ,
+	ОбщиеНастройки.Организация КАК ОрганизацияАналитики,
+	ОбщиеНастройки.МестоУчета КАК МестоУчетаАналитики
+ПОМЕСТИТЬ ОбщиеНастройки
+ИЗ
+	РегистрСведений.ПорядокОтраженияНаСчетахУчета КАК ОбщиеНастройки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПорядокОтраженияНаСчетахУчета КАК СледующиеОбщиеНастройки
+		ПО ОбщиеНастройки.Период &lt; СледующиеОбщиеНастройки.Период
+			И ОбщиеНастройки.ВидСчета = СледующиеОбщиеНастройки.ВидСчета
+			И ОбщиеНастройки.АналитикаУчета = СледующиеОбщиеНастройки.АналитикаУчета
+			И ОбщиеНастройки.Организация = СледующиеОбщиеНастройки.Организация
+			И ОбщиеНастройки.МестоУчета = СледующиеОбщиеНастройки.МестоУчета
+			И ОбщиеНастройки.Долгосрочный = СледующиеОбщиеНастройки.Долгосрочный
+ГДЕ
+	ОбщиеНастройки.Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+	И ОбщиеНастройки.МестоУчета = НЕОПРЕДЕЛЕНО
+{ГДЕ
+	ОбщиеНастройки.АналитикаУчета.*,
+	ОбщиеНастройки.ВидСчета.*,
+	ОбщиеНастройки.Долгосрочный,
+	ОбщиеНастройки.СчетУчета.*,
+	ОбщиеНастройки.Субконто.*,
+	ОбщиеНастройки.ОтноситсяКМалоценнымТМЦ}
+
+СГРУППИРОВАТЬ ПО
+	ОбщиеНастройки.Период,
+	ОбщиеНастройки.АналитикаУчета,
+	ОбщиеНастройки.ВидСчета,
+	ОбщиеНастройки.Долгосрочный,
+	ОбщиеНастройки.СчетУчета,
+	ОбщиеНастройки.Субконто,
+	ОбщиеНастройки.ОтноситсяКМалоценнымТМЦ,
+	ОбщиеНастройки.Организация,
+	ОбщиеНастройки.МестоУчета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Настройки.Период КАК Период,
+	Настройки.Организация КАК Организация,
+	Настройки.АналитикаУчета КАК АналитикаУчета,
+	Настройки.МестоУчета КАК МестоУчета,
+	Настройки.ВидСчета КАК ВидСчета,
+	Настройки.Долгосрочный КАК Долгосрочный,
+	ЕСТЬNULL(ОбщиеНастройки.СчетУчета, Настройки.СчетУчета) КАК СчетУчета,
+	ЕСТЬNULL(ОбщиеНастройки.Субконто, Настройки.Субконто) КАК Субконто,
+	ЕСТЬNULL(ОбщиеНастройки.ОтноситсяКМалоценнымТМЦ, Настройки.ОтноситсяКМалоценнымТМЦ) КАК ОтноситсяКМалоценнымТМЦ,
+	ЕСТЬNULL(ОбщиеНастройки.СчетУчета, ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ПустаяСсылка) КАК СчетПоУмолчанию
+{ВЫБРАТЬ
+	Период,
+	Организация.*,
+	АналитикаУчета.*,
+	МестоУчета.*,
+	ВидСчета.*,
+	Долгосрочный,
+	СчетУчета.*,
+	Субконто.*,
+	ОтноситсяКМалоценнымТМЦ,
+	СчетПоУмолчанию}
+ИЗ
+	РегистрСведений.ПорядокОтраженияНаСчетахУчета КАК Настройки
+		ЛЕВОЕ СОЕДИНЕНИЕ ОбщиеНастройки КАК ОбщиеНастройки
+		ПО Настройки.АналитикаУчета = ОбщиеНастройки.АналитикаУчета
+			И Настройки.ВидСчета = ОбщиеНастройки.ВидСчета
+			И Настройки.Период &gt;= ОбщиеНастройки.НачалоДействия
+			И Настройки.Период &lt; ОбщиеНастройки.ОкончаниеДействия
+			И Настройки.Долгосрочный = ОбщиеНастройки.Долгосрочный
+			И (Настройки.СчетУчета = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ПустаяСсылка))
+{ГДЕ
+	Настройки.Период,
+	Настройки.Организация.* КАК Организация,
+	Настройки.АналитикаУчета.*,
+	Настройки.МестоУчета.*,
+	Настройки.ВидСчета.*,
+	Настройки.Долгосрочный,
+	(ЕСТЬNULL(ОбщиеНастройки.СчетУчета, Настройки.СчетУчета)).* КАК СчетУчета,
+	(ЕСТЬNULL(ОбщиеНастройки.Субконто, Настройки.Субконто)).* КАК Субконто,
+	(ЕСТЬNULL(ОбщиеНастройки.ОтноситсяКМалоценнымТМЦ, Настройки.ОтноситсяКМалоценнымТМЦ)) КАК ОтноситсяКМалоценнымТМЦ,
+	(ЕСТЬNULL(ОбщиеНастройки.СчетУчета, ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ПустаяСсылка)) КАК СчетПоУмолчанию}</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Период</dcssch:dataPath>
+					<dcssch:field>Период</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АналитикаУчета</dcssch:dataPath>
+					<dcssch:field>АналитикаУчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МестоУчета</dcssch:dataPath>
+					<dcssch:field>МестоУчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидСчета</dcssch:dataPath>
+					<dcssch:field>ВидСчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Долгосрочный</dcssch:dataPath>
+					<dcssch:field>Долгосрочный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СчетУчета</dcssch:dataPath>
+					<dcssch:field>СчетУчета</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет учета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Ledger account</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Субконто</dcssch:dataPath>
+					<dcssch:field>Субконто</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Субконто</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ExtDimension</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтноситсяКМалоценнымТМЦ</dcssch:dataPath>
+					<dcssch:field>ОтноситсяКМалоценнымТМЦ</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Относится к малоценным ТМЦ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Related to low-cost inventory</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СчетПоУмолчанию</dcssch:dataPath>
+					<dcssch:field>СчетПоУмолчанию</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет по умолчанию</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Default account</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>InformationRegister.ПорядокОтраженияНаСчетахУчета</MainTable>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="АналитикаУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accounting dimension</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.НастройкаСчетовУчетаАналитикаУчета</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидЗадолженности" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид задолженности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Debt kind</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидЗадолженностиСтрокой" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид задолженности строкой</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Debt kind as string</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидСчета" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид счета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Account kind</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыСчетовРеглУчета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МестоУчета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Место учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Registration place</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.НастройкаСчетовУчетаМестоУчета</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Company</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимНастройки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Setup mode</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимНастройкиСтрокой" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим настройки строкой</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Setup mode as string</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

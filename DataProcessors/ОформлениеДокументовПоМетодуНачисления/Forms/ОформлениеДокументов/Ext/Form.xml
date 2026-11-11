@@ -1,0 +1,2468 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Оформление документов по методу начисления</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Register documents by depreciation method</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбщиеОтборы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие отборы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>General filters</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общие отборы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group common filters</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщиеОтборыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="Организация" id="3">
+					<DataPath>Организация</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>18</MaxWidth>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Company</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Подразделение" id="6">
+					<DataPath>Подразделение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Business unit</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">ПодразделениеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Контрагент" id="9">
+					<DataPath>Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Counterparty</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>18</MaxWidth>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ChooseType>false</ChooseType>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Counterparty</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="11"/>
+					<Events>
+						<Event name="OnChange">КонтрагентПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Договор" id="12">
+					<DataPath>Договор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>18</MaxWidth>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Контрагент</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Контрагент</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<TypeLink>
+						<xr:DataPath>Договор</xr:DataPath>
+						<xr:LinkItem>0</xr:LinkItem>
+					</TypeLink>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Contract</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="14"/>
+					<Events>
+						<Event name="OnChange">ДоговорПриИзменении</Event>
+						<Event name="StartChoice">ДоговорНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыОбработки" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы обработки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Processing pages</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы обработки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Processing pages</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыОбработкиРасширеннаяПодсказка" id="19"/>
+			<Events>
+				<Event name="OnCurrentPageChange">СтраницыОбработкиПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="СтраницаДокументыКОформлению" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оформлению</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>To register</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница документы к оформлению</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Page documents to register</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДокументыКОформлениюРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтборыДокументы" id="155">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отборы документов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Document filters</v8:content>
+								</v8:item>
+							</Title>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборыДокументыРасширеннаяПодсказка" id="156"/>
+							<ChildItems>
+								<InputField name="ПредставлениеПериодаРегистрации" id="15">
+									<DataPath>ПредставлениеПериодаРегистрации</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>10</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ChoiceButton>true</ChoiceButton>
+									<SpinButton>true</SpinButton>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Period</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПредставлениеПериодаРегистрацииКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ПредставлениеПериодаРегистрацииРасширеннаяПодсказка" id="17"/>
+									<Events>
+										<Event name="StartChoice">ПредставлениеПериодаРегистрацииНачалоВыбора</Event>
+										<Event name="Tuning">ПредставлениеПериодаРегистрацииРегулирование</Event>
+										<Event name="Clearing">ПредставлениеПериодаРегистрацииОчистка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПользовательскихНастроекДоговоров" id="354">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользовательские настройки договоров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Contract user settings</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пользовательских настроек договоров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>User settings group of contracts</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользовательскихНастроекДоговоровРасширеннаяПодсказка" id="355"/>
+						</UsualGroup>
+						<CommandBar name="ГруппаКомандыДоговоров" id="358">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды договоров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Contract commands</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды договоров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group Contract commands</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CommandSource>Item.СписокДоговоровПоступленияУслуг</CommandSource>
+							<ExtendedTooltip name="ГруппаКомандыДоговоровРасширеннаяПодсказка" id="359"/>
+							<ChildItems>
+								<Button name="СписокДоговоровПоступленияУслугСоздатьПоступлениеУслуг" id="143">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.СоздатьПоступлениеУслуг</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оформить</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Register</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугСоздатьПоступлениеУслугРасширеннаяПодсказка" id="144"/>
+								</Button>
+								<Button name="СписокДоговоровПоступленияУслугИзменитьФорму" id="362">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугИзменитьФормуРасширеннаяПодсказка" id="363"/>
+								</Button>
+								<Button name="СписокДоговоровПоступленияУслугСправка" id="364">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугСправкаРасширеннаяПодсказка" id="365"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="СписокДоговоровПоступленияУслуг" id="208">
+							<HeightInTableRows>1</HeightInTableRows>
+							<HorizontalScrollBar>UseAlways</HorizontalScrollBar>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<DataPath>СписокДоговоровПоступленияУслуг</DataPath>
+							<SearchStringLocation>CommandBar</SearchStringLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>ГруппаПользовательскихНастроекДоговоров</UserSettingsGroup>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокДоговоровПоступленияУслугКонтекстноеМеню" id="210"/>
+							<AutoCommandBar name="СписокДоговоровПоступленияУслугКоманднаяПанель" id="209">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокДоговоровПоступленияУслугРасширеннаяПодсказка" id="211"/>
+							<SearchStringAddition name="СписокДоговоровПоступленияУслугСтрокаПоиска" id="212">
+								<AdditionSource>
+									<Item>СписокДоговоровПоступленияУслуг</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоговоровПоступленияУслугСтрокаПоискаКонтекстноеМеню" id="213"/>
+								<ExtendedTooltip name="СписокДоговоровПоступленияУслугСтрокаПоискаРасширеннаяПодсказка" id="214"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДоговоровПоступленияУслугСостояниеПросмотра" id="218">
+								<AdditionSource>
+									<Item>СписокДоговоровПоступленияУслуг</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоговоровПоступленияУслугСостояниеПросмотраКонтекстноеМеню" id="219"/>
+								<ExtendedTooltip name="СписокДоговоровПоступленияУслугСостояниеПросмотраРасширеннаяПодсказка" id="220"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДоговоровПоступленияУслугУправлениеПоиском" id="215">
+								<AdditionSource>
+									<Item>СписокДоговоровПоступленияУслуг</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоговоровПоступленияУслугУправлениеПоискомКонтекстноеМеню" id="216"/>
+								<ExtendedTooltip name="СписокДоговоровПоступленияУслугУправлениеПоискомРасширеннаяПодсказка" id="217"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокДоговоровПоступленияУслугВыбор</Event>
+								<Event name="OnActivateRow">СписокДоговоровПоступленияУслугПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СписокДоговоровПоступленияУслугОрганизация" id="227">
+									<DataPath>СписокДоговоровПоступленияУслуг.Организация</DataPath>
+									<ContextMenu name="СписокДоговоровПоступленияУслугОрганизацияКонтекстноеМеню" id="228"/>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугОрганизацияРасширеннаяПодсказка" id="229"/>
+								</InputField>
+								<InputField name="СписокДоговоровПоступленияУслугКонтрагент" id="233">
+									<DataPath>СписокДоговоровПоступленияУслуг.Контрагент</DataPath>
+									<ContextMenu name="СписокДоговоровПоступленияУслугКонтрагентКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугКонтрагентРасширеннаяПодсказка" id="235"/>
+								</InputField>
+								<LabelField name="СписокДоговоровПоступленияУслугПартнер" id="259">
+									<DataPath>СписокДоговоровПоступленияУслуг.Партнер</DataPath>
+									<ContextMenu name="СписокДоговоровПоступленияУслугПартнерКонтекстноеМеню" id="260"/>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугПартнерРасширеннаяПодсказка" id="261"/>
+								</LabelField>
+								<InputField name="СписокДоговоровПоступленияУслугДоговор" id="224">
+									<DataPath>СписокДоговоровПоступленияУслуг.Договор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Договор</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Contract</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокДоговоровПоступленияУслугДоговорКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугДоговорРасширеннаяПодсказка" id="226"/>
+								</InputField>
+								<ColumnGroup name="СписокДоговоровПоступленияУслугГруппаЗаказПоставщику" id="332">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заказ поставщику</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Purchase order</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заказ поставщику</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Purchase order</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугГруппаЗаказПоставщикуРасширеннаяПодсказка" id="333"/>
+									<ChildItems>
+										<InputField name="СписокДоговоровПоступленияУслугНомерЗаказа" id="336">
+											<DataPath>СписокДоговоровПоступленияУслуг.Номер</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Number</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СписокДоговоровПоступленияУслугНомерЗаказаКонтекстноеМеню" id="337"/>
+											<ExtendedTooltip name="СписокДоговоровПоступленияУслугНомерЗаказаРасширеннаяПодсказка" id="338"/>
+										</InputField>
+										<LabelField name="СписокДоговоровПоступленияУслугДатаЗаказа" id="339">
+											<DataPath>СписокДоговоровПоступленияУслуг.Дата</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Date</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДоговоровПоступленияУслугДатаЗаказаКонтекстноеМеню" id="340"/>
+											<ExtendedTooltip name="СписокДоговоровПоступленияУслугДатаЗаказаРасширеннаяПодсказка" id="341"/>
+										</LabelField>
+										<InputField name="СписокДоговоровПоступленияУслугСуммаЗаказа" id="236">
+											<DataPath>СписокДоговоровПоступленияУслуг.СуммаДокумента</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Amount</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДоговоровПоступленияУслугСуммаЗаказаКонтекстноеМеню" id="237"/>
+											<ExtendedTooltip name="СписокДоговоровПоступленияУслугСуммаЗаказаРасширеннаяПодсказка" id="238"/>
+										</InputField>
+										<LabelField name="СписокДоговоровПоступленияУслугВалютаЗаказа" id="320">
+											<DataPath>СписокДоговоровПоступленияУслуг.Валюта</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Валюта</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Currency</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДоговоровПоступленияУслугВалютаЗаказаКонтекстноеМеню" id="321"/>
+											<ExtendedTooltip name="СписокДоговоровПоступленияУслугВалютаЗаказаРасширеннаяПодсказка" id="322"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="СписокДоговоровПоступленияУслугПодразделение" id="230">
+									<DataPath>СписокДоговоровПоступленияУслуг.Подразделение</DataPath>
+									<AutoMarkIncomplete>false</AutoMarkIncomplete>
+									<ContextMenu name="СписокДоговоровПоступленияУслугПодразделениеКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="СписокДоговоровПоступленияУслугПодразделениеРасширеннаяПодсказка" id="232"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДокументыКСторнированию" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К сопоставлению и сторнированию</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>To map and reverse</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница документы к сторнированию</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Page documents to reverse</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДокументыКСторнированиюРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтборыПоступленияУслуг" id="185">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отборы поступления услуг</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group Service receipt filters</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отборы поступления услуг</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group Service receipt filters</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборыПоступленияУслугРасширеннаяПодсказка" id="186"/>
+							<ChildItems>
+								<InputField name="ПериодСторно" id="317">
+									<DataPath>ПериодСторно</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>15</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Period</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПериодСторноКонтекстноеМеню" id="318"/>
+									<ExtendedTooltip name="ПериодСторноРасширеннаяПодсказка" id="319"/>
+									<Events>
+										<Event name="OnChange">ПериодСторноПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Состояние" id="304">
+									<DataPath>Состояние</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Status</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Status</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>21</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>21</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Все</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>All</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ожидается первичный документ</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Expecting primary document</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Требуется сопоставление и сторно</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Mapping and storno required</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сопоставлен и сторнирован</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Mapped and reversed</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СостояниеКонтекстноеМеню" id="305"/>
+									<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="306"/>
+									<Events>
+										<Event name="OnChange">СостояниеПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПользовательскихНастроекСторно" id="356">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользовательские настройки сторно</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Reversal user settings</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пользовательских настроек договоров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>User settings group of contracts</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользовательскихНастроекСторноРасширеннаяПодсказка" id="357"/>
+						</UsualGroup>
+						<CommandBar name="ГруппаКомандыСторно" id="366">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды договоров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Contract commands</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды договоров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group Contract commands</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CommandSource>Item.СписокДокументовКСторнированию</CommandSource>
+							<ExtendedTooltip name="ГруппаКомандыСторноРасширеннаяПодсказка" id="367"/>
+							<ChildItems>
+								<Button name="СписокДокументовКСторнированиюСторнироватьИСопоставитьПоступление" id="149">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.СторнироватьИСопоставитьПоступление</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сопоставить с приобретением и сторнировать</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Map with purchase and reverse</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюСторнироватьИСопоставитьПоступлениеРасширеннаяПодсказка" id="150"/>
+								</Button>
+								<Popup name="ПодменюСторноСписком" id="315">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторно списком</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Storno as list</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторно списком</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Storno as a list</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПодменюСторноСпискомРасширеннаяПодсказка" id="316"/>
+									<ChildItems>
+										<Button name="СторнироватьВыбраннойДатой" id="311">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СторнироватьВыбраннойДатой</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сторнировать выбранной датой</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Reverse with selected date</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СторнироватьВыбраннойДатойРасширеннаяПодсказка" id="312"/>
+										</Button>
+										<Button name="СторнироватьДатойПриобретения" id="313">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СторнироватьДатойПриобретения</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сторнировать датой приобретения</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Reverse with purchase date</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СторнироватьДатойПриобретенияРасширеннаяПодсказка" id="314"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Button name="СписокДокументовКСторнированиюИзменитьФорму" id="368">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюИзменитьФормуРасширеннаяПодсказка" id="369"/>
+								</Button>
+								<Button name="СписокДокументовКСторнированиюСправка" id="370">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюСправкаРасширеннаяПодсказка" id="371"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="СписокДокументовКСторнированию" id="61">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<DataPath>СписокДокументовКСторнированию</DataPath>
+							<RowPictureDataPath>~СписокДокументовКСторнированию.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>CommandBar</SearchStringLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>ГруппаПользовательскихНастроекСторно</UserSettingsGroup>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокДокументовКСторнированиюКонтекстноеМеню" id="62"/>
+							<AutoCommandBar name="СписокДокументовКСторнированиюКоманднаяПанель" id="63">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокДокументовКСторнированиюРасширеннаяПодсказка" id="64"/>
+							<SearchStringAddition name="СписокДокументовКСторнированиюСтрокаПоиска" id="65">
+								<AdditionSource>
+									<Item>СписокДокументовКСторнированию</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДокументовКСторнированиюСтрокаПоискаКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="СписокДокументовКСторнированиюСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДокументовКСторнированиюСостояниеПросмотра" id="68">
+								<AdditionSource>
+									<Item>СписокДокументовКСторнированию</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДокументовКСторнированиюСостояниеПросмотраКонтекстноеМеню" id="69"/>
+								<ExtendedTooltip name="СписокДокументовКСторнированиюСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДокументовКСторнированиюУправлениеПоиском" id="71">
+								<AdditionSource>
+									<Item>СписокДокументовКСторнированию</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДокументовКСторнированиюУправлениеПоискомКонтекстноеМеню" id="72"/>
+								<ExtendedTooltip name="СписокДокументовКСторнированиюУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокДокументовКСторнированиюВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокДокументовКСторнированиюОрганизация" id="277">
+									<DataPath>СписокДокументовКСторнированию.Организация</DataPath>
+									<ContextMenu name="СписокДокументовКСторнированиюОрганизацияКонтекстноеМеню" id="278"/>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюОрганизацияРасширеннаяПодсказка" id="279"/>
+								</LabelField>
+								<LabelField name="СписокДокументовКСторнированиюКонтрагент" id="274">
+									<DataPath>СписокДокументовКСторнированию.Контрагент</DataPath>
+									<ContextMenu name="СписокДокументовКСторнированиюКонтрагентКонтекстноеМеню" id="275"/>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюКонтрагентРасширеннаяПодсказка" id="276"/>
+								</LabelField>
+								<LabelField name="СписокДокументовКСторнированиюДоговор" id="271">
+									<DataPath>СписокДокументовКСторнированию.Договор</DataPath>
+									<ContextMenu name="СписокДокументовКСторнированиюДоговорКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюДоговорРасширеннаяПодсказка" id="273"/>
+								</LabelField>
+								<ColumnGroup name="СписокДокументовКСторнированиюГруппаПоступление" id="372">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поступление</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Receipt</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поступления</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Receipts</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюГруппаПоступлениеРасширеннаяПодсказка" id="373"/>
+									<ChildItems>
+										<LabelField name="СписокДокументовКСторнированиюНомерПоступления" id="377">
+											<DataPath>СписокДокументовКСторнированию.НомерПоступления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Number</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="СписокДокументовКСторнированиюНомерПоступленияКонтекстноеМеню" id="378"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюНомерПоступленияРасширеннаяПодсказка" id="379"/>
+										</LabelField>
+										<LabelField name="СписокДокументовКСторнированиюДатаПоступления" id="374">
+											<DataPath>СписокДокументовКСторнированию.ДатаПоступления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Date</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументовКСторнированиюДатаПоступленияКонтекстноеМеню" id="375"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюДатаПоступленияРасширеннаяПодсказка" id="376"/>
+										</LabelField>
+										<LabelField name="СписокДокументовКСторнированиюСуммаПоступления" id="295">
+											<DataPath>СписокДокументовКСторнированию.СуммаПоступления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Sum</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументовКСторнированиюСуммаПоступленияКонтекстноеМеню" id="296"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюСуммаПоступленияРасширеннаяПодсказка" id="297"/>
+										</LabelField>
+										<LabelField name="СписокДокументовКСторнированиюВалютаПоступления" id="326">
+											<DataPath>СписокДокументовКСторнированию.ВалютаПоступления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Валюта</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Currency</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументовКСторнированиюВалютаПоступленияКонтекстноеМеню" id="327"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюВалютаПоступленияРасширеннаяПодсказка" id="328"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СписокДокументовКСторнированиюГруппаПриобретение" id="380">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Приобретения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Purchases</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Приобретения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Purchases</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюГруппаПриобретениеРасширеннаяПодсказка" id="381"/>
+									<ChildItems>
+										<LabelField name="СписокДокументовКСторнированиюНомерПриобретения" id="382">
+											<DataPath>СписокДокументовКСторнированию.НомерПриобретения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Number</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="СписокДокументовКСторнированиюНомерПриобретенияКонтекстноеМеню" id="383"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюНомерПриобретенияРасширеннаяПодсказка" id="384"/>
+										</LabelField>
+										<LabelField name="СписокДокументовКСторнированиюДатаПриобретения" id="385">
+											<DataPath>СписокДокументовКСторнированию.ДатаПриобретения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Date</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументовКСторнированиюДатаПриобретенияКонтекстноеМеню" id="386"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюДатаПриобретенияРасширеннаяПодсказка" id="387"/>
+										</LabelField>
+										<LabelField name="СписокДокументовКСторнированиюСуммаПриобретения" id="298">
+											<DataPath>СписокДокументовКСторнированию.СуммаПриобретения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Sum</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументовКСторнированиюСуммаПриобретенияКонтекстноеМеню" id="299"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюСуммаПриобретенияРасширеннаяПодсказка" id="300"/>
+										</LabelField>
+										<LabelField name="СписокДокументовКСторнированиюВалютаПриобретения" id="329">
+											<DataPath>СписокДокументовКСторнированию.ВалютаПриобретения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Валюта</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Currency</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументовКСторнированиюВалютаПриобретенияКонтекстноеМеню" id="330"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюВалютаПриобретенияРасширеннаяПодсказка" id="331"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СписокДокументовКСторнированиюГруппаСторно" id="388">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Storno</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Storno</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюГруппаСторноРасширеннаяПодсказка" id="389"/>
+									<ChildItems>
+										<LabelField name="СписокДокументовКСторнированиюНомерСторно" id="390">
+											<DataPath>СписокДокументовКСторнированию.НомерСторно</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Number</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="СписокДокументовКСторнированиюНомерСторноКонтекстноеМеню" id="391"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюНомерСторноРасширеннаяПодсказка" id="392"/>
+										</LabelField>
+										<LabelField name="СписокДокументовКСторнированиюДатаСторно" id="393">
+											<DataPath>СписокДокументовКСторнированию.ДатаСторно</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Date</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументовКСторнированиюДатаСторноКонтекстноеМеню" id="394"/>
+											<ExtendedTooltip name="СписокДокументовКСторнированиюДатаСторноРасширеннаяПодсказка" id="395"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="СписокДокументовКСторнированиюПодразделение" id="283">
+									<DataPath>СписокДокументовКСторнированию.Подразделение</DataPath>
+									<ContextMenu name="СписокДокументовКСторнированиюПодразделениеКонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюПодразделениеРасширеннаяПодсказка" id="285"/>
+								</LabelField>
+								<LabelField name="СписокДокументовКСторнированиюОтветственный" id="280">
+									<DataPath>СписокДокументовКСторнированию.Ответственный</DataPath>
+									<ContextMenu name="СписокДокументовКСторнированиюОтветственныйКонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="СписокДокументовКСторнированиюОтветственныйРасширеннаяПодсказка" id="282"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelField name="СмТакжеВРаботе" id="131">
+			<DataPath>СмТакжеВРаботе</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СмТакжеВРаботеКонтекстноеМеню" id="132"/>
+			<ExtendedTooltip name="СмТакжеВРаботеРасширеннаяПодсказка" id="133"/>
+			<Events>
+				<Event name="URLProcessing">СмТакжеВРаботеОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Company</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Counterparty</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Договор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Contract</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Business unit</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодРегистрации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период регистрации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Registration period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеПериодаРегистрации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периода регистрации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Registration period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СмТакжеВРаботе" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>См также в работе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>See also in progress</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДоговоровПоступленияУслуг" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список договоров поступления услуг</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List of service receipt contracts</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокДоговоровПоступленияУслуг.ЗаказПоставщику</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДоговорыКонтрагентов.Ссылка КАК Ссылка,
+	ДоговорыКонтрагентов.Организация КАК Организация,
+	ДоговорыКонтрагентов.Контрагент КАК Контрагент,
+	ДоговорыКонтрагентов.Партнер КАК Партнер,
+	ДоговорыКонтрагентов.Подразделение КАК Подразделение
+ПОМЕСТИТЬ втДоговорыКонтрагентов
+ИЗ
+	Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+ГДЕ
+	НЕ ДоговорыКонтрагентов.ПометкаУдаления
+	И (ДоговорыКонтрагентов.ТипДоговора = ЗНАЧЕНИЕ(Перечисление.ТипыДоговоров.СПоставщиком)
+	ИЛИ ДоговорыКонтрагентов.ТипДоговора = ЗНАЧЕНИЕ(Перечисление.ТипыДоговоров.ВвозИзЕАЭС))
+	И ДоговорыКонтрагентов.ХозяйственнаяОперация В (ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщика),
+		ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщикаТоварыВПути),
+		ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщикаФактуровкаПоставки),
+		ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаВСтранахЕАЭС),
+		ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаВСтранахЕАЭСТоварыВПути),
+		ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаВСтранахЕАЭСФактуровкаПоставки))
+	И ДоговорыКонтрагентов.ЕжемесячноеПоступлениеУслуг
+	И ДоговорыКонтрагентов.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыДоговоровКонтрагентов.Действует)
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДоговорыКонтрагентов.Организация КАК Организация,
+	ДоговорыКонтрагентов.Контрагент КАК Контрагент,
+	ДоговорыКонтрагентов.Партнер КАК Партнер,
+	ДоговорыКонтрагентов.Ссылка КАК Договор,
+	ДоговорыКонтрагентов.Подразделение КАК Подразделение,
+	ЗаказПоставщику.Дата КАК Дата,
+	ЗаказПоставщику.Номер КАК Номер,
+	ЗаказПоставщику.Валюта КАК Валюта,
+	МАКСИМУМ(ЗаказПоставщику.СуммаДокумента) КАК СуммаДокумента,
+	ЗаказПоставщику.Ссылка КАК ЗаказПоставщику
+ИЗ
+	втДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеУслугВПодразделение КАК ПоступлениеУслугВПодразделение
+		ПО ПоступлениеУслугВПодразделение.Договор = ДоговорыКонтрагентов.Ссылка
+		И ПоступлениеУслугВПодразделение.Проведен
+		И ПоступлениеУслугВПодразделение.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ПоступлениеУслугВПодразделение.ХозяйственнаяОперация В
+		(ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщикаНеотфактурованнаяПоставка),
+			ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаВСтранахЕАЭСНеотфактурованнаяПоставка))
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказПоставщику КАК ЗаказПоставщику
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаказПоставщику.Товары КАК ЗаказПоставщикуТовары
+			ПО ЗаказПоставщику.Ссылка = ЗаказПоставщикуТовары.Ссылка
+			И ЗаказПоставщикуТовары.Номенклатура.ТипНоменклатуры В (ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Услуга),
+				ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Работа))
+		ПО ДоговорыКонтрагентов.Ссылка = ЗаказПоставщику.Договор
+		И ЗаказПоставщику.Проведен
+		И ВЫБОР
+			КОГДА &amp;ИспользоватьСтатусыЗаказовПоставщикам
+				ТОГДА ЗаказПоставщику.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыЗаказовПоставщикам.Подтвержден)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+		И ЗаказПоставщику.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ЗаказПоставщику.ХозяйственнаяОперация В
+		(ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщикаФактуровкаПоставки),
+			ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаВСтранахЕАЭСФактуровкаПоставки))
+ГДЕ
+	ПоступлениеУслугВПодразделение.Ссылка ЕСТЬ NULL
+{ГДЕ
+	ДоговорыКонтрагентов.Ссылка.* КАК Договор,
+	ДоговорыКонтрагентов.Подразделение.* КАК Подразделение,
+	ДоговорыКонтрагентов.Организация.*,
+	ДоговорыКонтрагентов.Контрагент.*,
+	ДоговорыКонтрагентов.Партнер.*}
+СГРУППИРОВАТЬ ПО
+	ЗаказПоставщику.Ссылка,
+	ДоговорыКонтрагентов.Ссылка,
+	ДоговорыКонтрагентов.Организация,
+	ДоговорыКонтрагентов.Контрагент,
+	ДоговорыКонтрагентов.Партнер,
+	ДоговорыКонтрагентов.Подразделение,
+	ЗаказПоставщику.Дата,
+	ЗаказПоставщику.Номер,
+	ЗаказПоставщику.Валюта</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Договор</dcssch:dataPath>
+					<dcssch:field>Договор</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Contract</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Company</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Контрагент</dcssch:dataPath>
+					<dcssch:field>Контрагент</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Counterparty</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Партнер</dcssch:dataPath>
+					<dcssch:field>Партнер</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партнер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Partner</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Department</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Number</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Date</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Валюта</dcssch:dataPath>
+					<dcssch:field>Валюта</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Currency</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаДокумента</dcssch:dataPath>
+					<dcssch:field>СуммаДокумента</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Document amount</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаказПоставщику</dcssch:dataPath>
+					<dcssch:field>ЗаказПоставщику</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ поставщику</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase order</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>КонецПериода</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец периода</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period end</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>НачалоПериода</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало периода</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period start</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ИспользоватьСтатусыЗаказовПоставщикам</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать статусы заказов поставщикам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Use purchase order statuses</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокДокументовКСторнированию" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов к сторнированию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List of documents for reversal</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокДокументовКСторнированию.ЗаказПоставщикуПриобретения</Field>
+				<Field>СписокДокументовКСторнированию.Поступление</Field>
+				<Field>СписокДокументовКСторнированию.Приобретение</Field>
+				<Field>СписокДокументовКСторнированию.Состояние</Field>
+				<Field>СписокДокументовКСторнированию.Сторно</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсправленияДокументовСрезПоследних.ИсправляемыйДокумент КАК ИсправляемыйДокумент
+ПОМЕСТИТЬ втИсправленияДокументов
+ИЗ
+	РегистрСведений.ИсправленияДокументов.СрезПоследних(&amp;КонецПериода, ИсправляемыйДокумент
+		ССЫЛКА Документ.ПоступлениеУслугВПодразделение
+	И НЕ СторнированИсправляемыйДокумент) КАК ИсправленияДокументовСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПоступлениеУслугВПодразделение.Ссылка КАК Ссылка,
+	ПоступлениеУслугВПодразделение.Организация КАК Организация,
+	ПоступлениеУслугВПодразделение.Контрагент КАК Контрагент,
+	ПоступлениеУслугВПодразделение.Договор КАК Договор,
+	ПоступлениеУслугВПодразделение.Распоряжение КАК Распоряжение,
+	ПоступлениеУслугВПодразделение.Подразделение КАК Подразделение,
+	ПоступлениеУслугВПодразделение.Автор КАК Ответственный,
+	ПоступлениеУслугВПодразделение.СуммаДокумента КАК СуммаДокумента,
+	ПоступлениеУслугВПодразделение.Валюта КАК Валюта,
+	ПоступлениеУслугВПодразделение.Дата КАК Дата,
+	ПоступлениеУслугВПодразделение.Номер КАК Номер,
+	ПоступлениеУслугВПодразделение.МоментВремени КАК МоментВремени,
+	ЕСТЬNULL(Сторно.Ссылка, ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)) КАК Сторно,
+	Сторно.Номер КАК СторноНомер,
+	Сторно.Дата КАК СторноДата,
+	Сторно.ЗаменяющийДокумент КАК СторноЗаменяющийДокумент
+ПОМЕСТИТЬ втСписокПоступлений
+ИЗ
+	Документ.ПоступлениеУслугВПодразделение КАК ПоступлениеУслугВПодразделение
+		ЛЕВОЕ СОЕДИНЕНИЕ втИсправленияДокументов КАК втИсправленияДокументов
+		ПО ПоступлениеУслугВПодразделение.Ссылка = втИсправленияДокументов.ИсправляемыйДокумент
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.Сторно КАК Сторно
+		ПО ПоступлениеУслугВПодразделение.Ссылка = Сторно.СторнируемыйДокумент
+		И Сторно.Проведен
+		И Сторно.Дата &gt;= &amp;НачалоПериода
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ПО ПоступлениеУслугВПодразделение.Договор = ДоговорыКонтрагентов.Ссылка
+ГДЕ
+	ПоступлениеУслугВПодразделение.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПоступлениеУслугВПодразделение.Проведен
+	И
+		(ПоступлениеУслугВПодразделение.ХозяйственнаяОперация = ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщикаНеотфактурованнаяПоставка)
+	ИЛИ
+		ПоступлениеУслугВПодразделение.ХозяйственнаяОперация = ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаВСтранахЕАЭСНеотфактурованнаяПоставка))
+	И
+		ДоговорыКонтрагентов.ВариантОформленияДокументовПоступленияПоУслугам = ЗНАЧЕНИЕ(Перечисление.ВариантыОформленияДокументовПоУслугам.ПоступлениеУслугСторнируется)
+	И втИсправленияДокументов.ИсправляемыйДокумент ЕСТЬ NULL
+
+ИНДЕКСИРОВАТЬ ПО НАБОРАМ
+(
+	(Договор,
+	Распоряжение),
+	(Сторно)
+)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	втСписокПоступлений.Договор КАК Договор
+ПОМЕСТИТЬ втДоговорыПоступлений
+ИЗ
+	втСписокПоступлений КАК втСписокПоступлений
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПриобретениеТоваровУслугТовары.Ссылка КАК Ссылка,
+	ПриобретениеТоваровУслуг.Договор КАК Договор,
+	ПриобретениеТоваровУслуг.ЗаказПоставщику КАК ЗаказПоставщику,
+	ПриобретениеТоваровУслуг.Номер КАК Номер,
+	ПриобретениеТоваровУслуг.Дата КАК Дата,
+	ПриобретениеТоваровУслуг.Валюта КАК Валюта,
+	МАКСИМУМ(ПриобретениеТоваровУслуг.СуммаДокумента) КАК СуммаДокумента,
+	ПриобретениеТоваровУслуг.МоментВремени КАК МоментВремени
+ПОМЕСТИТЬ втПриобретенияТоваровУслуг
+ИЗ
+	Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПриобретениеТоваровУслуг КАК ПриобретениеТоваровУслуг
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ втДоговорыПоступлений КАК втДоговорыПоступлений
+			ПО ПриобретениеТоваровУслуг.Договор = втДоговорыПоступлений.Договор
+		ПО ПриобретениеТоваровУслугТовары.Ссылка = ПриобретениеТоваровУслуг.Ссылка
+ГДЕ
+	ПриобретениеТоваровУслуг.Проведен
+	И ПриобретениеТоваровУслуг.Дата МЕЖДУ &amp;НачалоПериодаПТУ И &amp;КонецПериодаПТУ
+	И ПриобретениеТоваровУслуг.ХозяйственнаяОперация В (ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщика),
+		ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаВСтранахЕАЭС))
+	И ПриобретениеТоваровУслугТовары.Номенклатура.ТипНоменклатуры В (ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Услуга),
+		ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Работа))
+СГРУППИРОВАТЬ ПО
+	ПриобретениеТоваровУслугТовары.Ссылка,
+	ПриобретениеТоваровУслуг.Договор,
+	ПриобретениеТоваровУслуг.ЗаказПоставщику,
+	ПриобретениеТоваровУслуг.Номер,
+	ПриобретениеТоваровУслуг.Дата,
+	ПриобретениеТоваровУслуг.Валюта,
+	ПриобретениеТоваровУслуг.МоментВремени
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор,
+	ЗаказПоставщику
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втСписокПоступлений.Ссылка КАК Поступление,
+	втСписокПоступлений.Договор КАК Договор,
+	втСписокПоступлений.Распоряжение КАК Распоряжение,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ втПриобретенияТоваровУслуг.Ссылка) КАК КоличествоПриобретений
+ПОМЕСТИТЬ втКоличествоПриобретений
+ИЗ
+	втСписокПоступлений КАК втСписокПоступлений
+		ЛЕВОЕ СОЕДИНЕНИЕ втПриобретенияТоваровУслуг КАК втПриобретенияТоваровУслуг
+		ПО втСписокПоступлений.Договор = втПриобретенияТоваровУслуг.Договор
+		И втСписокПоступлений.Распоряжение = втПриобретенияТоваровУслуг.ЗаказПоставщику
+ГДЕ
+	втСписокПоступлений.МоментВремени &lt; втПриобретенияТоваровУслуг.МоментВремени
+	И втСписокПоступлений.Распоряжение ССЫЛКА Документ.ЗаказПоставщику
+	И втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+СГРУППИРОВАТЬ ПО
+	втСписокПоступлений.Распоряжение,
+	втСписокПоступлений.Ссылка,
+	втСписокПоступлений.Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втСписокПоступлений.Организация КАК Организация,
+	втСписокПоступлений.Контрагент КАК Контрагент,
+	втСписокПоступлений.Договор КАК Договор,
+	втСписокПоступлений.Ссылка КАК Поступление,
+	втСписокПоступлений.СуммаДокумента КАК СуммаПоступления,
+	втПриобретенияТоваровУслуг.Ссылка КАК Приобретение,
+	ЕСТЬNULL(втПриобретенияТоваровУслуг.СуммаДокумента, 0) КАК СуммаПриобретения,
+	втСписокПоступлений.Сторно КАК Сторно,
+	втСписокПоступлений.Подразделение КАК Подразделение,
+	втСписокПоступлений.Ответственный КАК Ответственный,
+	ВЫБОР
+		КОГДА втПриобретенияТоваровУслуг.Ссылка ЕСТЬ NULL
+		И втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+			ТОГДА 1
+		КОГДА втПриобретенияТоваровУслуг.Ссылка ЕСТЬ НЕ NULL
+		И втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+			ТОГДА 2
+		КОГДА втПриобретенияТоваровУслуг.Ссылка ЕСТЬ НЕ NULL
+		И НЕ втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+			ТОГДА 3
+	КОНЕЦ КАК Состояние,
+	втСписокПоступлений.Валюта КАК ВалютаПоступления,
+	втПриобретенияТоваровУслуг.Валюта КАК ВалютаПриобретения,
+	втСписокПоступлений.Дата КАК ДатаПоступления,
+	втСписокПоступлений.Номер КАК НомерПоступления,
+	втПриобретенияТоваровУслуг.Номер КАК НомерПриобретения,
+	втПриобретенияТоваровУслуг.Дата КАК ДатаПриобретения,
+	втСписокПоступлений.СторноНомер КАК НомерСторно,
+	втСписокПоступлений.СторноДата КАК ДатаСторно,
+	ВЫБОР
+		КОГДА
+			ДоговорыКонтрагентов.ВариантПриемкиТоваров = ЗНАЧЕНИЕ(Перечисление.ВариантыПриемкиТоваров.РазделенаПоЗаказамИНакладным)
+			ТОГДА втСписокПоступлений.Распоряжение
+		ИНАЧЕ ЗНАЧЕНИЕ(Документ.ЗаказПоставщику.ПустаяСсылка)
+	КОНЕЦ КАК ЗаказПоставщикуПриобретения
+ИЗ
+	втСписокПоступлений КАК втСписокПоступлений
+		ЛЕВОЕ СОЕДИНЕНИЕ втКоличествоПриобретений КАК втКоличествоПриобретений
+		ПО втСписокПоступлений.Ссылка = втКоличествоПриобретений.Поступление
+		ЛЕВОЕ СОЕДИНЕНИЕ втПриобретенияТоваровУслуг КАК втПриобретенияТоваровУслуг
+		ПО ЕСТЬNULL(втКоличествоПриобретений.КоличествоПриобретений, 0) = 1
+		И втСписокПоступлений.Договор = втПриобретенияТоваровУслуг.Договор
+		И втСписокПоступлений.Распоряжение = втПриобретенияТоваровУслуг.ЗаказПоставщику
+		И втСписокПоступлений.МоментВремени &lt; втПриобретенияТоваровУслуг.МоментВремени
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ПО втСписокПоступлений.Договор = ДоговорыКонтрагентов.Ссылка
+ГДЕ
+	втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втСписокПоступлений.Организация,
+	втСписокПоступлений.Контрагент,
+	втСписокПоступлений.Договор,
+	втСписокПоступлений.Ссылка,
+	втСписокПоступлений.СуммаДокумента,
+	втПриобретенияТоваровУслуг.Ссылка,
+	ЕСТЬNULL(втПриобретенияТоваровУслуг.СуммаДокумента, 0),
+	втСписокПоступлений.Сторно,
+	втСписокПоступлений.Подразделение,
+	втСписокПоступлений.Ответственный,
+	ВЫБОР
+		КОГДА втПриобретенияТоваровУслуг.Ссылка ЕСТЬ NULL
+		И втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+			ТОГДА 1
+		КОГДА втПриобретенияТоваровУслуг.Ссылка ЕСТЬ НЕ NULL
+		И втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+			ТОГДА 2
+		КОГДА втПриобретенияТоваровУслуг.Ссылка ЕСТЬ НЕ NULL
+		И НЕ втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)
+			ТОГДА 3
+	КОНЕЦ,
+	втСписокПоступлений.Валюта,
+	втПриобретенияТоваровУслуг.Валюта,
+	втСписокПоступлений.Дата,
+	втСписокПоступлений.Номер,
+	втПриобретенияТоваровУслуг.Номер,
+	втПриобретенияТоваровУслуг.Дата,
+	втСписокПоступлений.СторноНомер,
+	втСписокПоступлений.СторноДата,
+	ЗНАЧЕНИЕ(Документ.ЗаказПоставщику.ПустаяСсылка)
+ИЗ
+	втСписокПоступлений КАК втСписокПоступлений
+		ЛЕВОЕ СОЕДИНЕНИЕ втПриобретенияТоваровУслуг КАК втПриобретенияТоваровУслуг
+		ПО втСписокПоступлений.СторноЗаменяющийДокумент = втПриобретенияТоваровУслуг.Ссылка
+		И втСписокПоступлений.МоментВремени &lt; втПриобретенияТоваровУслуг.МоментВремени
+ГДЕ
+	НЕ втСписокПоступлений.Сторно = ЗНАЧЕНИЕ(Документ.Сторно.ПустаяСсылка)</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Company</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Контрагент</dcssch:dataPath>
+					<dcssch:field>Контрагент</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Counterparty</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Договор</dcssch:dataPath>
+					<dcssch:field>Договор</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Contract</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Поступление</dcssch:dataPath>
+					<dcssch:field>Поступление</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Receipt</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаПоступления</dcssch:dataPath>
+					<dcssch:field>СуммаПоступления</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма поступления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Received amount</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Приобретение</dcssch:dataPath>
+					<dcssch:field>Приобретение</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаПриобретения</dcssch:dataPath>
+					<dcssch:field>СуммаПриобретения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма приобретения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase amount</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сторно</dcssch:dataPath>
+					<dcssch:field>Сторно</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сторно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Storno</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Department</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ответственный</dcssch:dataPath>
+					<dcssch:field>Ответственный</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Person responsible</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Состояние</dcssch:dataPath>
+					<dcssch:field>Состояние</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>State</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВалютаПоступления</dcssch:dataPath>
+					<dcssch:field>ВалютаПоступления</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта поступления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Currency of receipt</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВалютаПриобретения</dcssch:dataPath>
+					<dcssch:field>ВалютаПриобретения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта приобретения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase currency</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоступления</dcssch:dataPath>
+					<dcssch:field>ДатаПоступления</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата поступления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Date of receipt</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерПоступления</dcssch:dataPath>
+					<dcssch:field>НомерПоступления</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер поступления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Receipt number</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерПриобретения</dcssch:dataPath>
+					<dcssch:field>НомерПриобретения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер приобретения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase number</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПриобретения</dcssch:dataPath>
+					<dcssch:field>ДатаПриобретения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата приобретения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase date</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСторно</dcssch:dataPath>
+					<dcssch:field>НомерСторно</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер сторно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Storno number</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСторно</dcssch:dataPath>
+					<dcssch:field>ДатаСторно</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата сторно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Storno date</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаказПоставщикуПриобретения</dcssch:dataPath>
+					<dcssch:field>ЗаказПоставщикуПриобретения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ поставщику приобретения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase order purchases</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИсправляемыйДокумент</dcssch:dataPath>
+					<dcssch:field>ИсправляемыйДокумент</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исправляемый документ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Corrected document</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>Период</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>НачалоПериода</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало периода</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period start</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>КонецПериодаПТУ</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец периода ПТУ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Vendor invoice period end</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>НачалоПериодаПТУ</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало периода ПТУ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Vendor invoice period start</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>КонецПериода</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец периода</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period end</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПоступления</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДоступностьКонтрагентов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступность контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Counterparty availability</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Состояние" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>State</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодСторно" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Партнер" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Partner</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменилисьПараметрыФормы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменились параметры формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Form parameters changed</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСтатусыЗаказовПоставщикам" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать статусы заказов поставщикам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use purchase order statuses</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьПоступлениеУслуг" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать поступление услуг</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create service receipt</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОформитьПоРаспоряжению</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьПоступлениеУслуг</Action>
+		</Command>
+		<Command name="СторнироватьИСопоставитьПоступление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторнировать и сопоставить поступление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reverse and map receipt</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторнировать и сопоставить поступление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reverse and map receipt</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СторнироватьИСопоставитьПоступление</Action>
+		</Command>
+		<Command name="СторнироватьВыбраннойДатой" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторнировать выбранной датой</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reverse with selected date</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторнировать1 числом</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reverse1 with a number</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СторнироватьВыбраннойДатой</Action>
+		</Command>
+		<Command name="СторнироватьДатойПриобретения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторнировать датой приобретения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reverse with purchase date</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторнировать списком</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reverse with a list</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СторнироватьДатойПриобретения</Action>
+		</Command>
+	</Commands>
+</Form>

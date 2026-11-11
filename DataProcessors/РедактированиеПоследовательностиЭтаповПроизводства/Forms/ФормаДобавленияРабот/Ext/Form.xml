@@ -1,0 +1,1570 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Добавление работ</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Add works</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Auto</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПеренестиВДокумент" id="60">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПеренестиВДокумент</CommandName>
+				<ExtendedTooltip name="ФормаПеренестиВДокументРасширеннаяПодсказка" id="61"/>
+			</Button>
+			<ButtonGroup name="КомандыФормы" id="68">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Form commands</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="КомандыФормыРасширеннаяПодсказка" id="69"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="Режим" id="115">
+			<DataPath>Режим</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Одна работа</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>One work</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Несколько работ</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Several works</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="РежимКонтекстноеМеню" id="116"/>
+			<ExtendedTooltip name="РежимРасширеннаяПодсказка" id="117"/>
+			<Events>
+				<Event name="OnChange">РежимПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<Pages name="ГруппаСтраницы" id="109">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Pages</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="110"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаОднаРабота" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница одна работа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group page one work</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСтраницаОднаРаботаРасширеннаяПодсказка" id="112"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыполняемаяРабота" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняемая работа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Work to perform</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаВыполняемаяРаботаРасширеннаяПодсказка" id="119"/>
+							<ChildItems>
+								<InputField name="Номенклатура" id="122">
+									<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.Номенклатура</DataPath>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ChoiceParameters>
+										<app:item name="Отбор.ТипНоменклатуры">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.Работа</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="НоменклатураКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="124"/>
+									<Events>
+										<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиНоменклатураПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Характеристика" id="125">
+									<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.Характеристика</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Характеристика работы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Work variant</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ХарактеристикаРасширеннаяПодсказка" id="127"/>
+									<Events>
+										<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиХарактеристикаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаВыполняемаяРаботаКоличество" id="128">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выполняемая работа количество</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group Work to perform quantity</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВыполняемаяРаботаКоличествоРасширеннаяПодсказка" id="129"/>
+									<ChildItems>
+										<InputField name="КоличествоУпаковок" id="130">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.КоличествоУпаковок</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Quantity</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество работ</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Number of works</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>10</MaxWidth>
+											<ContextMenu name="КоличествоУпаковокКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="КоличествоУпаковокРасширеннаяПодсказка" id="132"/>
+											<Events>
+												<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиКоличествоУпаковокПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelField name="ЕдиницаИзмерения" id="133">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.Номенклатура.ЕдиницаИзмерения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>10</MaxWidth>
+											<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="135"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаВыполняемаяРаботаПроизвести" id="136">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выполняемая работа произвести</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group Work to perform produce</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВыполняемаяРаботаПроизвестиРасширеннаяПодсказка" id="137"/>
+									<ChildItems>
+										<CheckBoxField name="Произвести" id="138">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.Производится</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Произвести</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Produce</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроизвестиКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="ПроизвестиРасширеннаяПодсказка" id="140"/>
+											<Events>
+												<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиПроизвестиПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="Спецификация" id="141">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.Спецификация</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="СпецификацияКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="СпецификацияРасширеннаяПодсказка" id="143"/>
+											<Events>
+												<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиСпецификацияПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="СтатьяКалькуляции" id="144">
+									<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.СтатьяКалькуляции</DataPath>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="СтатьяКалькуляцииКонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="СтатьяКалькуляцииРасширеннаяПодсказка" id="146"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРемонтируемоеИзделие" id="120">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ремонтируемое изделие</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Product under R&amp;M</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаРемонтируемоеИзделиеРасширеннаяПодсказка" id="121"/>
+							<ChildItems>
+								<InputField name="РемонтируемоеИзделиеНоменклатура" id="147">
+									<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеНоменклатура</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номенклатура</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Items</v8:content>
+										</v8:item>
+									</Title>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;указывается справочно&gt;</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>&lt;specified for reference&gt;</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="РемонтируемоеИзделиеНоменклатураКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="РемонтируемоеИзделиеНоменклатураРасширеннаяПодсказка" id="149"/>
+									<Events>
+										<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатураПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РемонтируемоеИзделиеХарактеристика" id="150">
+									<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеХарактеристика</DataPath>
+									<ContextMenu name="РемонтируемоеИзделиеХарактеристикаКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="РемонтируемоеИзделиеХарактеристикаРасширеннаяПодсказка" id="152"/>
+									<Events>
+										<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеХарактеристикаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаРемонтируемоеИзделиеУказаниеСерий" id="196">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ремонтируемое изделие указание серий</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group Product under R&amp;M specify batches</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРемонтируемоеИзделиеУказаниеСерийРасширеннаяПодсказка" id="197"/>
+									<ChildItems>
+										<InputField name="РемонтируемоеИзделиеСерия" id="153">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеСерия</DataPath>
+											<ContextMenu name="РемонтируемоеИзделиеСерияКонтекстноеМеню" id="154"/>
+											<ExtendedTooltip name="РемонтируемоеИзделиеСерияРасширеннаяПодсказка" id="155"/>
+											<Events>
+												<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСерияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<PictureField name="РемонтируемоеИзделиеСтатусУказанияСерий" id="198">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеСтатусУказанияСерий</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Width>3</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СтатусыУказанияСерий</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<ContextMenu name="РемонтируемоеИзделиеСтатусУказанияСерийКонтекстноеМеню" id="199"/>
+											<ExtendedTooltip name="РемонтируемоеИзделиеСтатусУказанияСерийРасширеннаяПодсказка" id="200"/>
+										</PictureField>
+									</ChildItems>
+								</UsualGroup>
+								<CheckBoxField name="РемонтируемоеИзделиеДобавитьВЭтапы" id="161">
+									<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеДобавитьВЭтапы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Принять изделие к учету</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Recognize product</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РемонтируемоеИзделиеДобавитьВЭтапыКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="РемонтируемоеИзделиеДобавитьВЭтапыРасширеннаяПодсказка" id="163"/>
+									<Events>
+										<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеДобавитьВЭтапыПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаРемонтируемоеИзделиеДобавитьВЭтапы" id="156">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ремонтируемое изделие добавить в этапы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group Product under R&amp;M add to stages</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРемонтируемоеИзделиеДобавитьВЭтапыРасширеннаяПодсказка" id="157"/>
+									<ChildItems>
+										<InputField name="РемонтируемоеИзделиеСклад" id="164">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеСклад</DataPath>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="РемонтируемоеИзделиеСкладКонтекстноеМеню" id="165"/>
+											<ExtendedTooltip name="РемонтируемоеИзделиеСкладРасширеннаяПодсказка" id="166"/>
+										</InputField>
+										<UsualGroup name="ГруппаРемонтируемоеИзделиеКоличество" id="167">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ремонтируемое изделие количество</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group Product under R&amp;M quantity</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРемонтируемоеИзделиеКоличествоРасширеннаяПодсказка" id="168"/>
+											<ChildItems>
+												<InputField name="РемонтируемоеИзделиеКоличествоУпаковок" id="169">
+													<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеКоличествоУпаковок</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>10</MaxWidth>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="РемонтируемоеИзделиеКоличествоУпаковокКонтекстноеМеню" id="170"/>
+													<ExtendedTooltip name="РемонтируемоеИзделиеКоличествоУпаковокРасширеннаяПодсказка" id="171"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеКоличествоУпаковокПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="РемонтируемоеИзделиеУпаковка" id="172">
+													<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеУпаковка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>8</MaxWidth>
+													<ChoiceParameterLinks>
+														<xr:Link>
+															<xr:Name>Номенклатура</xr:Name>
+															<xr:DataPath xsi:type="xs:string">Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеНоменклатура</xr:DataPath>
+															<xr:ValueChange>Clear</xr:ValueChange>
+														</xr:Link>
+													</ChoiceParameterLinks>
+													<ContextMenu name="РемонтируемоеИзделиеУпаковкаКонтекстноеМеню" id="173"/>
+													<ExtendedTooltip name="РемонтируемоеИзделиеУпаковкаРасширеннаяПодсказка" id="174"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="РемонтируемоеИзделиеЭтапРазборки" id="175">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеЭтапРазборки</DataPath>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.ПартияПроизводства</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ПартияПроизводства</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ChoiceParameters>
+												<app:item name="Отбор.ПланированиеРабот">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">false</Value>
+													</app:value>
+												</app:item>
+												<app:item name="Отбор.Статус">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="v8:FixedArray">
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Формируется</Value>
+															</v8:Value>
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Сформирован</Value>
+															</v8:Value>
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.КВыполнению</Value>
+															</v8:Value>
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Начат</Value>
+															</v8:Value>
+														</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Этап, на котором выполняется демонтаж изделия</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Stage at which the product is dismantled</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="РемонтируемоеИзделиеЭтапРазборкиКонтекстноеМеню" id="176"/>
+											<ExtendedTooltip name="РемонтируемоеИзделиеЭтапРазборкиРасширеннаяПодсказка" id="177"/>
+										</InputField>
+										<InputField name="РемонтируемоеИзделиеЭтапСборки" id="178">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеЭтапСборки</DataPath>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.ПартияПроизводства</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ПартияПроизводства</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ChoiceParameters>
+												<app:item name="Отбор.ПланированиеРабот">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">false</Value>
+													</app:value>
+												</app:item>
+												<app:item name="Отбор.Статус">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="v8:FixedArray">
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Формируется</Value>
+															</v8:Value>
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Сформирован</Value>
+															</v8:Value>
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.КВыполнению</Value>
+															</v8:Value>
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Начат</Value>
+															</v8:Value>
+														</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Этап, на котором выполняется установка изделия</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Stage at which the product is installed</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="РемонтируемоеИзделиеЭтапСборкиКонтекстноеМеню" id="179"/>
+											<ExtendedTooltip name="РемонтируемоеИзделиеЭтапСборкиРасширеннаяПодсказка" id="180"/>
+										</InputField>
+										<InputField name="РемонтируемоеИзделиеСтатьяКалькуляции" id="181">
+											<DataPath>Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеСтатьяКалькуляции</DataPath>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChoiceParameters>
+												<app:item name="Отбор.ТипЗатрат">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="v8:FixedArray">
+															<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.ТипыЗатрат.EnumValue.Материальные</Value>
+															</v8:Value>
+														</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<ContextMenu name="РемонтируемоеИзделиеСтатьяКалькуляцииКонтекстноеМеню" id="182"/>
+											<ExtendedTooltip name="РемонтируемоеИзделиеСтатьяКалькуляцииРасширеннаяПодсказка" id="183"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаНесколькоРабот" id="113">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница несколько работ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group page several works</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСтраницаНесколькоРаботРасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыполняемыеРаботы" id="50">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняемые работы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Works to perform</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаВыполняемыеРаботыРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<Table name="ОбеспечениеМатериаламиИРаботами" id="1">
+									<Representation>List</Representation>
+									<FooterHeight>0</FooterHeight>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ОбеспечениеМатериаламиИРаботами</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ОбеспечениеМатериаламиИРаботамиКонтекстноеМеню" id="3"/>
+									<AutoCommandBar name="ОбеспечениеМатериаламиИРаботамиКоманднаяПанель" id="2">
+										<ChildItems>
+											<Popup name="ОбеспечениеМатериаламиИРаботамиГруппаЗаполнить" id="97">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Заполнить</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Fill</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиГруппаЗаполнитьРасширеннаяПодсказка" id="98"/>
+												<ChildItems>
+													<Button name="ОбеспечениеМатериаламиИРаботамиЗаполнитьСклад" id="99">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьСклад</CommandName>
+														<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиЗаполнитьСкладРасширеннаяПодсказка" id="100"/>
+													</Button>
+													<Button name="ОбеспечениеМатериаламиИРаботамиЗаполнитьСтатьюКалькуляции" id="101">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьСтатьюКалькуляции</CommandName>
+														<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиЗаполнитьСтатьюКалькуляцииРасширеннаяПодсказка" id="102"/>
+													</Button>
+													<ButtonGroup name="ОбеспечениеМатериаламиИРаботамиГруппаЗаполнитьРемонтируемоеИзделие" id="207">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Обеспечение материалами и работами группа заполнить ремонтируемое изделие</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Supply with materials and works group fill in product under R&amp;M</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиГруппаЗаполнитьРемонтируемоеИзделиеРасширеннаяПодсказка" id="208"/>
+														<ChildItems>
+															<Button name="ОбеспечениеМатериаламиИРаботамиЗаполнитьЭтапРазборки" id="203">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ЗаполнитьЭтапРазборки</CommandName>
+																<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиЗаполнитьЭтапРазборкиРасширеннаяПодсказка" id="204"/>
+															</Button>
+															<Button name="ОбеспечениеМатериаламиИРаботамиЗаполнитьЭтапСборки" id="205">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ЗаполнитьЭтапСборки</CommandName>
+																<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиЗаполнитьЭтапСборкиРасширеннаяПодсказка" id="206"/>
+															</Button>
+															<Button name="ОбеспечениеМатериаламиИРаботамиЗаполнитьСтатьюКалькуляцииРемонтируемогоИзделия" id="201">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ЗаполнитьСтатьюКалькуляцииРемонтируемогоИзделия</CommandName>
+																<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиЗаполнитьСтатьюКалькуляцииРемонтируемогоИзделияРасширеннаяПодсказка" id="202"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+												</ChildItems>
+											</Popup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРасширеннаяПодсказка" id="4"/>
+									<SearchStringAddition name="ОбеспечениеМатериаламиИРаботамиСтрокаПоиска" id="5">
+										<AdditionSource>
+											<Item>ОбеспечениеМатериаламиИРаботами</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОбеспечениеМатериаламиИРаботамиСтрокаПоискаКонтекстноеМеню" id="6"/>
+										<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ОбеспечениеМатериаламиИРаботамиСостояниеПросмотра" id="11">
+										<AdditionSource>
+											<Item>ОбеспечениеМатериаламиИРаботами</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОбеспечениеМатериаламиИРаботамиСостояниеПросмотраКонтекстноеМеню" id="12"/>
+										<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ОбеспечениеМатериаламиИРаботамиУправлениеПоиском" id="8">
+										<AdditionSource>
+											<Item>ОбеспечениеМатериаламиИРаботами</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ОбеспечениеМатериаламиИРаботамиУправлениеПоискомКонтекстноеМеню" id="9"/>
+										<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnStartEdit">ОбеспечениеМатериаламиИРаботамиПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ОбеспечениеМатериаламиИРаботамиГруппаВыполняемаяРабота" id="70">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполняемая работа</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Work to perform</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиГруппаВыполняемаяРаботаРасширеннаяПодсказка" id="71"/>
+											<ChildItems>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиНоменклатура" id="14">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.Номенклатура</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>16</Width>
+													<ChoiceParameters>
+														<app:item name="Отбор.ТипНоменклатуры">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="v8:FixedArray">
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.Работа</Value>
+																	</v8:Value>
+																</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиНоменклатураКонтекстноеМеню" id="15"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиНоменклатураРасширеннаяПодсказка" id="16"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиНоменклатураПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиХарактеристика" id="17">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.Характеристика</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>16</Width>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиХарактеристикаКонтекстноеМеню" id="18"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиХарактеристикаРасширеннаяПодсказка" id="19"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиХарактеристикаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиКоличествоУпаковок" id="20">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.КоличествоУпаковок</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Количество</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Quantity</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>6</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиКоличествоУпаковокКонтекстноеМеню" id="21"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиКоличествоУпаковокРасширеннаяПодсказка" id="22"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиКоличествоУпаковокПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиНоменклатураЕдиницаИзмерения" id="28">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.Номенклатура.ЕдиницаИзмерения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ед. изм.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Unit of measure</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>7</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMarkIncomplete>false</AutoMarkIncomplete>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="29"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="30"/>
+												</InputField>
+												<CheckBoxField name="ОбеспечениеМатериаламиИРаботамиПроизвести" id="106">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.Производится</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Произвести</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Produce</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиПроизвестиКонтекстноеМеню" id="107"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиПроизвестиРасширеннаяПодсказка" id="108"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиПроизвестиПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиСпецификация" id="103">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.Спецификация</DataPath>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиСпецификацияКонтекстноеМеню" id="104"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиСпецификацияРасширеннаяПодсказка" id="105"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиСпецификацияПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиСтатьяКалькуляции" id="31">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.СтатьяКалькуляции</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>16</Width>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиСтатьяКалькуляцииКонтекстноеМеню" id="32"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиСтатьяКалькуляцииРасширеннаяПодсказка" id="33"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ОбеспечениеМатериаламиИРаботамиГруппаРемонтируемоеИзделие" id="34">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ремонтируемое изделие</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Product under R&amp;M</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиГруппаРемонтируемоеИзделиеРасширеннаяПодсказка" id="35"/>
+											<ChildItems>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатура" id="36">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеНоменклатура</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Номенклатура</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Items</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатураКонтекстноеМеню" id="37"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатураРасширеннаяПодсказка" id="38"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатураПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеХарактеристика" id="39">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеХарактеристика</DataPath>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеХарактеристикаКонтекстноеМеню" id="40"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеХарактеристикаРасширеннаяПодсказка" id="41"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеХарактеристикаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<ColumnGroup name="ОбеспечениеМатериаламиИРаботамиГруппаРемонтируемоеИзделиеСерия" id="42">
+													<EnableContentChange>true</EnableContentChange>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Серия</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Batch</v8:content>
+														</v8:item>
+													</Title>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиГруппаРемонтируемоеИзделиеСерияРасширеннаяПодсказка" id="43"/>
+													<ChildItems>
+														<PictureField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСтатусУказанияСерий" id="44">
+															<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеСтатусУказанияСерий</DataPath>
+															<ShowInHeader>false</ShowInHeader>
+															<ValuesPicture>
+																<xr:Ref>CommonPicture.СтатусыУказанияСерий</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</ValuesPicture>
+															<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСтатусУказанияСерийКонтекстноеМеню" id="45"/>
+															<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСтатусУказанияСерийРасширеннаяПодсказка" id="46"/>
+														</PictureField>
+														<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСерия" id="47">
+															<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеСерия</DataPath>
+															<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСерияКонтекстноеМеню" id="48"/>
+															<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСерияРасширеннаяПодсказка" id="49"/>
+															<Events>
+																<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСерияПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<CheckBoxField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеДобавитьВЭтапы" id="184">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеДобавитьВЭтапы</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеДобавитьВЭтапыКонтекстноеМеню" id="185"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеДобавитьВЭтапыРасширеннаяПодсказка" id="186"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеДобавитьВЭтапыПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСклад" id="94">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеСклад</DataPath>
+													<Width>12</Width>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСкладКонтекстноеМеню" id="95"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСкладРасширеннаяПодсказка" id="96"/>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеКоличествоУпаковок" id="79">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеКоличествоУпаковок</DataPath>
+													<Width>6</Width>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеКоличествоУпаковокКонтекстноеМеню" id="80"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеКоличествоУпаковокРасширеннаяПодсказка" id="81"/>
+													<Events>
+														<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеКоличествоУпаковокПриИзменении</Event>
+													</Events>
+												</InputField>
+												<ColumnGroup name="ОбеспечениеМатериаламиИРаботамиГруппаРемонтируемоеИзделиеЕдиницаИзмерения" id="77">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обеспечение материалами и работами группа ремонтируемое изделие единица измерения</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Supply with materials and works group product under R&amp;M unit of measure</v8:content>
+														</v8:item>
+													</Title>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиГруппаРемонтируемоеИзделиеЕдиницаИзмеренияРасширеннаяПодсказка" id="78"/>
+													<ChildItems>
+														<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеУпаковка" id="88">
+															<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеУпаковка</DataPath>
+															<ShowInHeader>false</ShowInHeader>
+															<ShowInFooter>false</ShowInFooter>
+															<Width>7</Width>
+															<ChoiceParameterLinks>
+																<xr:Link>
+																	<xr:Name>Номенклатура</xr:Name>
+																	<xr:DataPath xsi:type="xs:string">Items.ОбеспечениеМатериаламиИРаботами.CurrentData.РемонтируемоеИзделиеНоменклатура</xr:DataPath>
+																	<xr:ValueChange>DontChange</xr:ValueChange>
+																</xr:Link>
+															</ChoiceParameterLinks>
+															<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеУпаковкаКонтекстноеМеню" id="89"/>
+															<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеУпаковкаРасширеннаяПодсказка" id="90"/>
+															<Events>
+																<Event name="OnChange">ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеУпаковкаПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатураЕдиницаИзмерения" id="91">
+															<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеНоменклатура.ЕдиницаИзмерения</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ед. изм.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Unit</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="92"/>
+															<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="93"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеЭтапРазборки" id="187">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеЭтапРазборки</DataPath>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ChoiceParameterLinks>
+														<xr:Link>
+															<xr:Name>Отбор.ПартияПроизводства</xr:Name>
+															<xr:DataPath xsi:type="xs:string">Объект.ПартияПроизводства</xr:DataPath>
+															<xr:ValueChange>Clear</xr:ValueChange>
+														</xr:Link>
+													</ChoiceParameterLinks>
+													<ChoiceParameters>
+														<app:item name="Отбор.ПланированиеРабот">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">false</Value>
+															</app:value>
+														</app:item>
+														<app:item name="Отбор.Статус">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="v8:FixedArray">
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Формируется</Value>
+																	</v8:Value>
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Сформирован</Value>
+																	</v8:Value>
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.КВыполнению</Value>
+																	</v8:Value>
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Начат</Value>
+																	</v8:Value>
+																</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеЭтапРазборкиКонтекстноеМеню" id="188"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеЭтапРазборкиРасширеннаяПодсказка" id="189"/>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеЭтапСборки" id="190">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеЭтапСборки</DataPath>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ChoiceParameterLinks>
+														<xr:Link>
+															<xr:Name>Отбор.ПартияПроизводства</xr:Name>
+															<xr:DataPath xsi:type="xs:string">Объект.ПартияПроизводства</xr:DataPath>
+															<xr:ValueChange>Clear</xr:ValueChange>
+														</xr:Link>
+													</ChoiceParameterLinks>
+													<ChoiceParameters>
+														<app:item name="Отбор.ПланированиеРабот">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">false</Value>
+															</app:value>
+														</app:item>
+														<app:item name="Отбор.Статус">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="v8:FixedArray">
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Формируется</Value>
+																	</v8:Value>
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Сформирован</Value>
+																	</v8:Value>
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.КВыполнению</Value>
+																	</v8:Value>
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.СтатусыЭтаповПроизводства2_2.EnumValue.Начат</Value>
+																	</v8:Value>
+																</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеЭтапСборкиКонтекстноеМеню" id="191"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеЭтапСборкиРасширеннаяПодсказка" id="192"/>
+												</InputField>
+												<InputField name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСтатьяКалькуляции" id="193">
+													<DataPath>Объект.ОбеспечениеМатериаламиИРаботами.РемонтируемоеИзделиеСтатьяКалькуляции</DataPath>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ChoiceParameters>
+														<app:item name="Отбор.ТипЗатрат">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="v8:FixedArray">
+																	<v8:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ТипыЗатрат.EnumValue.Материальные</Value>
+																	</v8:Value>
+																</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСтатьяКалькуляцииКонтекстноеМеню" id="194"/>
+													<ExtendedTooltip name="ОбеспечениеМатериаламиИРаботамиРемонтируемоеИзделиеСтатьяКалькуляцииРасширеннаяПодсказка" id="195"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РедактированиеПоследовательностиЭтаповПроизводства</v8:Type>
+			</Type>
+			<Columns>
+				<AdditionalColumns table="Объект.ОбеспечениеМатериаламиИРаботами">
+					<Column name="ХарактеристикиИспользуются" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Variants are used</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ТипНоменклатуры" id="7">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип номенклатуры</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Item type</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+					<Column name="РемонтируемоеИзделиеХарактеристикиИспользуются" id="9">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Variants are used</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="РемонтируемоеИзделиеТипНоменклатуры" id="10">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип номенклатуры</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Item type</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+					<Column name="РемонтируемоеИзделиеСклад" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Склад</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Warehouse</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+						</Type>
+						<FillCheck>ShowError</FillCheck>
+					</Column>
+					<Column name="РемонтируемоеИзделиеКоличествоУпаковок" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Quantity</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>15</v8:Digits>
+								<v8:FractionDigits>3</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+						<FillCheck>ShowError</FillCheck>
+					</Column>
+					<Column name="РемонтируемоеИзделиеУпаковка" id="13">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Упаковка</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Packaging unit</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+						</Type>
+					</Column>
+					<Column name="РемонтируемоеИзделиеКоличество" id="17">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ремонтируемое изделие количество</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Product under R&amp;M quantity</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>15</v8:Digits>
+								<v8:FractionDigits>3</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПланированиеРабот" id="18">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Планирование работ</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Work planning</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="РемонтируемоеИзделиеДобавитьВЭтапы" id="25">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Принять к учету</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Recognize</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="РемонтируемоеИзделиеЭтапРазборки" id="26">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выпуск</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Release</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:DocumentRef.ЭтапПроизводства2_2</v8:Type>
+						</Type>
+						<FillCheck>ShowError</FillCheck>
+					</Column>
+					<Column name="РемонтируемоеИзделиеЭтапСборки" id="27">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Потребление</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Consumption</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:DocumentRef.ЭтапПроизводства2_2</v8:Type>
+						</Type>
+						<FillCheck>ShowError</FillCheck>
+					</Column>
+					<Column name="РемонтируемоеИзделиеСтатьяКалькуляции" id="29">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Статья калькуляции</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Product cost element</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.СтатьиКалькуляции</v8:Type>
+						</Type>
+						<FillCheck>ShowError</FillCheck>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПараметрыУказанияСерий" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры указания серий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Batch specification parameters</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПараметрыВыбораСпецификаций" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры выбора спецификаций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>BOM selection parameters</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СкладПоУмолчанию" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад по умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Default warehouse</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Этап" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stage</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЭтапПроизводства2_2</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыЗаполненияНазначений" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры заполнения назначений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Assignment filling parameters</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПараметрыРедактированияЭтапа" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры редактирования этапа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stage editing parameters</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДоступныеОстаткиПараметрыВстраивания" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные остатки параметры встраивания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Available balance embedding parameters</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Режим" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mode</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПеренестиВДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add to document</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add to document</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВДокумент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьСклад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warehouse</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаполнитьСклад</Action>
+		</Command>
+		<Command name="ЗаполнитьСтатьюКалькуляции" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статью калькуляции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Product cost element</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаполнитьСтатьюКалькуляции</Action>
+		</Command>
+		<Command name="ЗаполнитьСтатьюКалькуляцииРемонтируемогоИзделия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статью калькуляции ремонтируемого изделия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Product cost element of product under R&amp;M</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаполнитьСтатьюКалькуляцииРемонтируемогоИзделия</Action>
+		</Command>
+		<Command name="ЗаполнитьЭтапРазборки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап выпуска</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Release stage</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаполнитьЭтапРазборки</Action>
+		</Command>
+		<Command name="ЗаполнитьЭтапСборки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап потребления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Consumption stage</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаполнитьЭтапСборки</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПартияПроизводства">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПартииПроизводства</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Этап">
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЭтапПроизводства2_2</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

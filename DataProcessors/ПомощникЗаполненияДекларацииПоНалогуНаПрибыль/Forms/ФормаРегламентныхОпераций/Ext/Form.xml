@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Регламентные операции</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Scheduled jobs</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОрганизацияПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group Company period</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОрганизацияПериодРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<InputField name="ПредставлениеОрганизаций" id="5">
+					<DataPath>ПредставлениеОрганизаций</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Companies</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>22</MaxWidth>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ShowCheckBoxesInDropList>true</ShowCheckBoxesInDropList>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПредставлениеОрганизацийКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ПредставлениеОрганизацийРасширеннаяПодсказка" id="7"/>
+					<Events>
+						<Event name="StartChoice">ПредставлениеОрганизацийНачалоВыбора</Event>
+						<Event name="Opening">ПредставлениеОрганизацийОткрытие</Event>
+						<Event name="Clearing">ПредставлениеОрганизацийОчистка</Event>
+					</Events>
+				</InputField>
+				<Button name="ОбновитьСостояние" id="11">
+					<Type>UsualButton</Type>
+					<Width>3</Width>
+					<MaxWidth>2</MaxWidth>
+					<CommandName>Form.Command.ОбновитьСостояние</CommandName>
+					<ExtendedTooltip name="ОбновитьСостояниеРасширеннаяПодсказка" id="12"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРегламентныеОперации" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламентные операции</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Scheduled jobs</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРегламентныеОперацииРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВводКорректировокСтоимостиОС" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод корректировок стоимости ОС</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Entry of fixed asset cost adjustments</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВводКорректировокСтоимостиОСРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<Pages name="КартинкиВводКорректировокСтоимостиОС" id="17">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки ввод корректировок стоимости ОС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures Entry of fixed asset cost adjustments</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки ввода корректировок стоимости ОС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures of entry of fixed asset cost adjustments</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="КартинкиВводКорректировокСтоимостиОСРасширеннаяПодсказка" id="18"/>
+							<ChildItems>
+								<Page name="ВводКорректировокСтоимостиОСВыполненоУспешно" id="19">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод корректировок стоимости ОС выполнено успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Entry of fixed asset cost adjustments completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ВводКорректировокСтоимостиОСВыполненоУспешноРасширеннаяПодсказка" id="20"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияВводКорректировокСтоимостиОСВыполненоУспешно" id="21">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация ввод корректировок стоимости ОС выполнено успешно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Entry of fixed asset cost adjustments completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияВводКорректировокСтоимостиОСВыполненоУспешноКонтекстноеМеню" id="22"/>
+											<ExtendedTooltip name="ДекорацияВводКорректировокСтоимостиОСВыполненоУспешноРасширеннаяПодсказка" id="23"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ВводКорректировокСтоимостиОСНеВыполнено" id="24">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод корректировок стоимости ОС не выполнено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Entry of fixed asset cost adjustments not completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ВводКорректировокСтоимостиОСНеВыполненоРасширеннаяПодсказка" id="25"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияВводКорректировокСтоимостиОСНеВыполнено" id="26">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация ввод корректировок стоимости ОС не выполнено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Entry of fixed asset cost adjustments not completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.НеВыполнено</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияВводКорректировокСтоимостиОСНеВыполненоКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="ДекорацияВводКорректировокСтоимостиОСНеВыполненоРасширеннаяПодсказка" id="28"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="ДекорацияВводКорректировокСтоимостиОС" id="29">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ввод корректировок стоимости и амортизации ОС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Enter fixed asset cost and depreciation adjustment entries</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияВводКорректировокСтоимостиОСКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ДекорацияВводКорректировокСтоимостиОСРасширеннаяПодсказка" id="31"/>
+						</LabelDecoration>
+						<Button name="ОткрытьВводКорректировокСтоимостиОС" id="32">
+							<Type>Hyperlink</Type>
+							<Width>8</Width>
+							<CommandName>Form.Command.ОткрытьВводКорректировокСтоимостиОС</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ввести</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Enter</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьВводКорректировокСтоимостиОСРасширеннаяПодсказка" id="33"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПерерасчетАмортизацииОС" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа перерасчет амортизации ОС</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group Recalculation of fixed asset depreciation</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПерерасчетАмортизацииОСРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<Pages name="КартинкиПерерасчетАмортизацииОС" id="98">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки перерасчет амортизации ОС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures Recalculation of fixed asset depreciation</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки ввода корректировок стоимости ОС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures of entry of fixed asset cost adjustments</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="КартинкиПерерасчетАмортизацииОСРасширеннаяПодсказка" id="99"/>
+							<ChildItems>
+								<Page name="ПерерасчетАмортизацииОСВыполненоУспешно" id="100">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет амортизации ОС выполнено успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Recalculation of fixed asset depreciation completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПерерасчетАмортизацииОСВыполненоУспешноРасширеннаяПодсказка" id="101"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПерерасчетАмортизацииОСВыполненоУспешно" id="102">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация перерасчет амортизации ОС Выполнено успешно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Recalculation of fixed asset depreciation completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПерерасчетАмортизацииОСВыполненоУспешноКонтекстноеМеню" id="103"/>
+											<ExtendedTooltip name="ДекорацияПерерасчетАмортизацииОСВыполненоУспешноРасширеннаяПодсказка" id="104"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ПерерасчетАмортизацииОСНеВыполнено" id="105">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет амортизации ОС не выполнено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Recalculation of fixed asset depreciation not completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПерерасчетАмортизацииОСНеВыполненоРасширеннаяПодсказка" id="106"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПерерасчетАмортизацииОСНеВыполнено" id="107">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация перерасчет амортизации ОС Не выполнено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration Recalculation of fixed asset depreciation not completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.НеВыполнено</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПерерасчетАмортизацииОСНеВыполненоКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="ДекорацияПерерасчетАмортизацииОСНеВыполненоРасширеннаяПодсказка" id="109"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="ДекорацияПерерасчетАмортизацииОС" id="110">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перерасчет амортизации ОС</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Recalculation of fixed asset depreciation</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПерерасчетАмортизацииОСКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ДекорацияПерерасчетАмортизацииОСРасширеннаяПодсказка" id="112"/>
+						</LabelDecoration>
+						<Button name="ВыполнитьПерерасчетАмортизацииОС" id="113">
+							<Type>Hyperlink</Type>
+							<Width>8</Width>
+							<CommandName>Form.Command.ВыполнитьПерерасчетАмортизацииОС</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Execute</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ВыполнитьПерерасчетАмортизацииОСРасширеннаяПодсказка" id="114"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРасчетСебестоимостиНУ" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расчет себестоимости НУ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group TA cost calculation</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасчетСебестоимостиНУРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<Pages name="КартинкиРасчетСебестоимостиНУ" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки расчет себестоимости НУ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures TA cost calculation</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки расчета себестоимости НУ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures of TA cost calculation</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="КартинкиРасчетСебестоимостиНУРасширеннаяПодсказка" id="37"/>
+							<ChildItems>
+								<Page name="РасчетСебестоимостиНУВыполненоУспешно" id="38">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчет себестоимости НУ выполнено успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>TA cost calculation completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="РасчетСебестоимостиНУВыполненоУспешноРасширеннаяПодсказка" id="39"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияРасчетСебестоимостиНУВыполненоУспешно" id="40">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация расчет себестоимости НУ выполнено успешно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration TA cost calculation completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияРасчетСебестоимостиНУВыполненоУспешноКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="ДекорацияРасчетСебестоимостиНУВыполненоУспешноРасширеннаяПодсказка" id="42"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="РасчетСебестоимостиНУНеВыполнено" id="43">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчет себестоимости НУ не выполнено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>TA cost calculation not completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="РасчетСебестоимостиНУНеВыполненоРасширеннаяПодсказка" id="44"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияРасчетСебестоимостиНУНеВыполнено" id="45">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация расчет себестоимости НУ не выполнено</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Decoration TA cost calculation not completed</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.НеВыполнено</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияРасчетСебестоимостиНУНеВыполненоКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="ДекорацияРасчетСебестоимостиНУНеВыполненоРасширеннаяПодсказка" id="47"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="ДекорацияРасчетСебестоимостиНУ" id="48">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расчет себестоимости НУ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>TA cost calculation</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияРасчетСебестоимостиНУКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ДекорацияРасчетСебестоимостиНУРасширеннаяПодсказка" id="50"/>
+						</LabelDecoration>
+						<Button name="ВыполнитьРасчетСебестоимостиНУ" id="51">
+							<Type>Hyperlink</Type>
+							<Width>8</Width>
+							<CommandName>Form.Command.ВыполнитьРасчетСебестоимостиНУ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Execute</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ВыполнитьРасчетСебестоимостиНУРасширеннаяПодсказка" id="52"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтражениеДокументовВРеглУчете" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отражение документов в регламентированном учете</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Local accounting posting</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтражениеДокументовВРеглУчетеРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<Pages name="КартинкиОтражениеДокументовВРеглУчете" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки Отражение документов в регл.учете</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures local accounting posting</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки распределение материалов и работ на продукцию</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pictures distribution of materials and works for products</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="КартинкиОтражениеДокументовВРеглУчетеРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<Page name="ОтражениеДокументовВРеглУчетеВыполненоУспешно" id="57">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполнено успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Completed successfully</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ОтражениеДокументовВРеглУчетеВыполненоУспешноРасширеннаяПодсказка" id="58"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация48" id="59">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация48КонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="Декорация48РасширеннаяПодсказка" id="61"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ОтражениеДокументовВРеглУчетеНеВыполнено" id="62">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не выполнено</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Not completed</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ОтражениеДокументовВРеглУчетеНеВыполненоРасширеннаяПодсказка" id="63"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация49" id="64">
+											<Width>2</Width>
+											<Height>1</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<Picture>
+												<xr:Ref>CommonPicture.НеВыполнено</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация49КонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="Декорация49РасширеннаяПодсказка" id="66"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="ДекорацияОтражениеДокументовВРеглУчете" id="67">
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отражение документов в регламентированном учете</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Local accounting posting</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОтражениеДокументовВРеглУчетеКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ДекорацияОтражениеДокументовВРеглУчетеРасширеннаяПодсказка" id="69"/>
+						</LabelDecoration>
+						<Button name="ВыполнитьОтражениеДокументовВРеглУчете" id="70">
+							<Type>Hyperlink</Type>
+							<Width>8</Width>
+							<CommandName>Form.Command.ВыполнитьОтражениеДокументовВРеглУчете</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отразить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Record</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ВыполнитьОтражениеДокументовВРеглУчетеРасширеннаяПодсказка" id="71"/>
+						</Button>
+						<Button name="ОткрытьОтражениеДокументовВРеглУчете" id="75">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьОтражениеДокументовВРеглУчете</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробнее</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Details</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьОтражениеДокументовВРеглУчетеРасширеннаяПодсказка" id="76"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="НадписьПериодЗаблокирован" id="72">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:AccentColor</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период закрыт и заблокирован от изменений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period is closed and locked from changes</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьПериодЗаблокированКонтекстноеМеню" id="73"/>
+			<ExtendedTooltip name="НадписьПериодЗаблокированРасширеннаяПодсказка" id="74"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОрганизацииРегламентныхОпераций" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации регламентных операций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period-end transaction companies</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВсеОрганизацииРегламентныхОпераций" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все организации регламентных операций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All companies of period-end transactions</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеОрганизаций" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление организаций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Company presentation</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаблокированныеОрганизации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заблокированные организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Locked companies</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДоступныеОрганизацииРегламентныхОпераций" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные организации регламентных операций</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Available companies of period-end transactions</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьОтражениеДокументовВРеглУчете" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить отражение документов в регл учете</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Perform local accounting posting</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьОтражениеДокументовВРеглУчете</Action>
+		</Command>
+		<Command name="ВыполнитьРасчетСебестоимостиНУ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить расчет себестоимости НУ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate TA cost</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьРасчетСебестоимостиНУ</Action>
+		</Command>
+		<Command name="ОбновитьСостояние" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить состояние</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update state</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСостояние</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОткрытьВводКорректировокСтоимостиОС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ввод корректировок стоимости ОС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open entry of fixed asset cost adjustments</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьВводКорректировокСтоимостиОС</Action>
+		</Command>
+		<Command name="ОткрытьОтражениеДокументовВРеглУчете" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отражение документов в регл учете</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open local accounting posting</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьОтражениеДокументовВРеглУчете</Action>
+		</Command>
+		<Command name="ВыполнитьПерерасчетАмортизацииОС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить перерасчет амортизации ОС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Recalculate fixed asset depreciation</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьПерерасчетАмортизацииОС</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

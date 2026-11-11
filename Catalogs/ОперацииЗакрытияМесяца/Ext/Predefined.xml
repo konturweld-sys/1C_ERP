@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.20">
+	<Item id="25ad269e-5650-47dd-829f-93314ed2058b">
+		<Name>БлокировкаОтИзменений</Name>
+		<Code/>
+		<Description>Блокировка от изменений</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="b2c4f089-135b-473d-b3de-f77a229c3f99">
+				<Name>ЗаблокироватьОтИзменений</Name>
+				<Code/>
+				<Description>Заблокировать от изменений</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="7e4e86d9-7b2a-41bf-b293-d08c7441d5a0">
+		<Name>Взаиморасчеты</Name>
+		<Code/>
+		<Description>Взаиморасчеты</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="27a3fa1e-28af-4aff-90a2-439e9587a923">
+				<Name>НачислениеПроцентовПоДоходнойАренде</Name>
+				<Code/>
+				<Description>Начисление процентов по доходной аренде</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ad0d1616-b0a4-43e0-9eff-72f67a49d092">
+				<Name>ПереоценкаДенежныхСредствИФинансовыхИнструментов</Name>
+				<Code/>
+				<Description>Переоценка денежных средств и финансовых инструментов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4f32a2a3-20f0-4d24-b8ae-54a6e4d1e07f">
+				<Name>ПереоценкаРасчетовСКомитентом</Name>
+				<Code/>
+				<Description>Переоценка расчетов с комитентом (принципалом)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ac998484-d6f1-4757-bce0-6911721638c6">
+				<Name>РасчетПроцентныхРасходовДисконтирования</Name>
+				<Code/>
+				<Description>Расчет процентных расходов дисконтирования</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b591391f-6d52-4ae5-87a7-1fb11b442cbe">
+				<Name>ФормированиеДвиженийПоРасчетамСПартнерамиИПереоценкаРасчетов</Name>
+				<Code/>
+				<Description>Формирование движений по расчетам с партнерами и переоценка расчетов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b3b3406e-0406-492d-b513-d6a64a65daf3">
+				<Name>ПереоценкаРасчетовПоОплатеТруда</Name>
+				<Code/>
+				<Description>Переоценка расчетов по оплате труда</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="9705279c-6808-42d1-86f2-1639f340c693">
+		<Name>МеждународныйУчет</Name>
+		<Code/>
+		<Description>Международный учет</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="aed6534a-b80c-4149-b139-2f6b5bfa3a1f">
+				<Name>УстановкаДатыЗапретаФормированияПроводокМУ</Name>
+				<Code/>
+				<Description>Дата запрета формирования проводок</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="59eade66-058b-4264-830d-190f3c6ae154">
+				<Name>ЗакрытиеСчетовУчетаДоходовИРасходовМУ</Name>
+				<Code/>
+				<Description>Закрытие счетов учета доходов и расходов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ca69123c-a23b-4a45-8120-9655af0b65b7">
+				<Name>РасчетКурсовыхРазницВВалютеПредставления</Name>
+				<Code/>
+				<Description>Расчет курсовых разниц в валюте представления</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4c1ff9fa-03a9-4bd6-bc2d-5304e31e28c8">
+				<Name>РасчетКурсовыхРазницВФункциональнойВалюте</Name>
+				<Code/>
+				<Description>Расчет курсовых разниц в функциональной валюте</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0c06202a-0cd8-4c4c-abc1-195681961334">
+				<Name>РеклассификацияДолгосрочныхАктивовОбязательствМУ</Name>
+				<Code/>
+				<Description>Реклассификация долгосрочных активов и обязательств (международный учет)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a416e71a-6412-4e6a-af64-7ddded43cbce">
+				<Name>ОтражениеДокументовВМеждународномУчете</Name>
+				<Code/>
+				<Description>Отражение документов в международном учете</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="bf6c08d1-cd99-4abd-82a5-573222688e4b">
+		<Name>ПроизводственныеЗатраты</Name>
+		<Code/>
+		<Description>Производственные затраты</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="660d2bbd-71af-4ad2-ac26-2dc05d301acc">
+				<Name>НастройкаРаспределенияРасходовВручную</Name>
+				<Code/>
+				<Description>Настройка распределения расходов, требующих ручного ввода</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="9b66262b-952b-49bd-bf8d-9f19fa570efe">
+				<Name>НастройкаРаспределенияРасходов</Name>
+				<Code/>
+				<Description>Настройка распределения расходов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="4fe5678e-ca21-477c-a8db-6a3d4a3e0144">
+		<Name>РегламентированныйУчет</Name>
+		<Code/>
+		<Description>Регламентированный учет</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="2da2f828-b04f-4099-a5f2-0594167a2a90">
+				<Name>РасчетКурсовыхРазниц</Name>
+				<Code/>
+				<Description>Расчет курсовых разниц</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c113293c-95d0-42c4-9dd0-0cb12e9c4ac4">
+				<Name>РеклассификацияДолгосрочныхАктивовОбязательств</Name>
+				<Code/>
+				<Description>Реклассификация долгосрочных активов и обязательств</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1f49939c-2069-4eea-b5ad-635ba80dfa72">
+				<Name>ФормированиеСводныхСправокНДС</Name>
+				<Code/>
+				<Description>Формирование сводных справок НДС</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0b4cf6fa-e521-4d0a-a9a4-8be5ea42639d">
+				<Name>ОтражениеДокументовВРегламентированномУчете</Name>
+				<Code/>
+				<Description>Отражение документов в регламентированном учете</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="127ed8ba-6fec-4b29-865c-0c2412519d64">
+				<Name>ПереносСальдоПриИзмененииНастроекСчетовРеглУчета</Name>
+				<Code/>
+				<Description>Перенос сальдо при изменении настроек счетов регл учета</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="00750693-4644-43c3-bf40-580eceff1149">
+				<Name>ПерерасчетНалогаНаПрибыльПрошлыхПериодов</Name>
+				<Code/>
+				<Description>Перерасчет налога на прибыль прошлых периодов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="a22e91ee-775b-4b54-8aa3-ef2fe1f32f3d">
+		<Name>РучныеОперации</Name>
+		<Code/>
+		<Description>Ручные операции</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="b8f7ce3b-3fc0-498e-8383-a528fc6fc70b">
+				<Name>ВводСведенийСреднесписочнойЧисленности</Name>
+				<Code/>
+				<Description>Ввод сведений среднесписочной численности</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="00ef7bd3-4cbc-4c7d-bee8-846323ac6c05">
+				<Name>ЗаполнениеФактическойСтоимостиВНАПриОтключенномУчетеСебестоимости</Name>
+				<Code/>
+				<Description>Заполнение фактической стоимости внеоборотных активов при отключенном учете себестоимости</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4f3e01d1-1923-44d3-bf24-c9161fe1a3c1">
+				<Name>ИсправлениеДублейВидовЗапасов</Name>
+				<Code/>
+				<Description>Исправление дублей видов запасов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1f3231cd-dc35-4c6d-91e5-602ddda32347">
+				<Name>ИсправлениеОтрицательныхОстатковТоваровОрганизаций</Name>
+				<Code/>
+				<Description>Исправление отрицательных остатков товаров организаций</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="870921ea-a89f-4d8f-aa16-9695c2b4e29d">
+				<Name>НачислениеСписаниеРезервовПредстоящихРасходов</Name>
+				<Code/>
+				<Description>Начисление и списание резервов предстоящих расходов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e860abbf-adf0-439a-b32d-05a08c93ebbd">
+				<Name>ОформлениеОстатковПередачиВПереработку2_4</Name>
+				<Code/>
+				<Description>Оформление остатков передачи в переработку (версии 2.4)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1272cae5-6168-4493-9857-c0d42c13a129">
+				<Name>ОформлениеОстатковПриемаВПереработку2_4</Name>
+				<Code/>
+				<Description>Оформление остатков приема в переработку (версии 2.4)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5e31d0e9-1faf-477a-8b62-06e02ea65454">
+				<Name>ОформлениеОтчетовДавальцам</Name>
+				<Code/>
+				<Description>Оформление отчетов давальцам</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a30f609e-76ee-472b-99ee-b04ac2a246c2">
+				<Name>ОформлениеОтчетовДавальцамМеждуОрганизациями</Name>
+				<Code/>
+				<Description>Оформление отчетов давальцам между организациями</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="52a2f808-db76-4eba-b7ad-6b095e243f6e">
+				<Name>ОформлениеОтчетовКомитентамОСписании</Name>
+				<Code/>
+				<Description>Оформление отчетов комитентам о списании</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e2ebb632-cd08-4cb9-a4c2-2da1c2d27ba6">
+				<Name>ОформлениеОтчетовПереработчиков</Name>
+				<Code/>
+				<Description>Оформление отчетов переработчиков</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7199389b-d463-4e3f-b34b-f7ffb01ea6d9">
+				<Name>ОформлениеОтчетовПоКомиссииМеждуОрганизациями</Name>
+				<Code/>
+				<Description>Оформление отчетов по комиссии между организациями</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7049d9b1-e838-45b7-bf2a-b4fb45a032da">
+				<Name>ОформлениеОстатковТоваровКПередаче</Name>
+				<Code/>
+				<Description>Оформление передач и возвратов товаров (по данным, введенным до версии 2.4)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="174d0729-4bc3-4bc0-962d-17341015fb8e">
+				<Name>ОформлениеПередачТоваров</Name>
+				<Code/>
+				<Description>Оформление передач товаров</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a8a476ab-6708-4429-9843-ce846ae2a4cf">
+				<Name>ОформлениеПроизводстваБезЗаказов</Name>
+				<Code/>
+				<Description>Оформление производства без заказов (2.2)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3a4a0940-550b-4be9-a0a8-6ad2af031392">
+				<Name>ОформлениеСчетовФактурИТаможенныхДокументов</Name>
+				<Code/>
+				<Description>Оформление счетов-фактур и таможенных документов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="2825c55f-bf79-4ec2-8dcf-c7f6a404f146">
+				<Name>ОчисткаДвиженийПриОтключенномУчетеСебестоимости</Name>
+				<Code/>
+				<Description>Очистка неиспользуемых движений по регистрам учета себестоимости</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="94ddf017-461f-474d-8d8d-1c70f8b5702e">
+				<Name>ПереходНаЕдиныйНалоговыйСчет</Name>
+				<Code/>
+				<Description>Переход на единый налоговый счет</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ca5db56b-1e5e-4c30-92b2-04a43b186014">
+				<Name>ПереходНаУчетВнеоборотныхАктивовВерсии24</Name>
+				<Code/>
+				<Description>Переход на учет внеоборотных активов версии 2.4</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a74fb374-793d-4089-be35-9a045e2ba755">
+				<Name>ПереходНаУчетКурсовыхРазницНУПо67ФЗ</Name>
+				<Code/>
+				<Description>Переход на учет курсовых разниц НУ по 67-ФЗ</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8d204682-f98a-4b42-91ee-dd5e91f50c07">
+				<Name>ПеречислениеНДСВБюджетПоОтдельнымОперациям</Name>
+				<Code/>
+				<Description>Перечисление НДС в бюджет по отдельным операциям</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="540be0b1-b44e-4956-a4c0-ec978a412a8e">
+				<Name>ПланированиеПроизводстваПродукцииБезСпецификаций</Name>
+				<Code/>
+				<Description>Планирование производства продукции без спецификаций</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="035275a3-2538-49d8-9563-6d7629770124">
+				<Name>ПроверкаКурсовЗачетаВАвансовыхОтчетах</Name>
+				<Code/>
+				<Description>Проверка курсов зачета в авансовых отчетах</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1c4090f5-e1b6-4c7d-991c-3365090d102e">
+				<Name>РаспределениеМатериаловИРаботНаСебестоимостьПродукции21</Name>
+				<Code/>
+				<Description>Распределение материалов и работ на себестоимость продукции (версия 2.1)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="72311f46-6050-49dc-90c6-21c52e2cf9b5">
+				<Name>РаспределениеМатериаловИРаботНаСебестоимостьПродукции22</Name>
+				<Code/>
+				<Description>Распределение материалов и работ на себестоимость продукции (версия 2.2)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="59a77349-cf32-490b-a35a-5b929bd394dd">
+				<Name>РаспределениеРасходовБудущихПериодов</Name>
+				<Code/>
+				<Description>Распределение расходов будущих периодов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3ef07820-f53d-440c-ab7f-981bccd4cd09">
+				<Name>ПереходНаНовыеРежимыУчета</Name>
+				<Code/>
+				<Description>Рекомендуется осуществить переход на новые режимы учета</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="81db6b77-4fae-4775-98a2-f2f0d80ccb3d">
+				<Name>СписаниеЗатратНаВыпускБезРаспоряжений</Name>
+				<Code/>
+				<Description>Списание затрат на выпуск без распоряжений</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a2f2bab7-2d1b-4fbe-89a2-204407f8a78b">
+				<Name>НачисленияПоКредитамДепозитамИВыданнымЗаймам</Name>
+				<Code/>
+				<Description>Начисления по кредитам депозитам и выданным займам (вручную)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a59a5cff-3333-47d1-a727-9705e85a9e86">
+				<Name>ОсвобождениеОтУплатыНалоговВСвязиСКоронавирусом</Name>
+				<Code/>
+				<Description>Освобождение от уплаты налогов в связи с коронавирусом</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b35aea99-a0b0-410d-8fce-d83b2063e5f7">
+				<Name>ОформлениеВыкупаТоваров</Name>
+				<Code/>
+				<Description>Оформление выкупа товаров</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4c4f3466-be4a-4ff2-be68-2002088de460">
+				<Name>ИсправлениеОшибокВИсходныхДанных</Name>
+				<Code/>
+				<Description>Исправление ошибок в исходных данных</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="62903bb2-0c66-4133-8b8a-238dc5c2d0ce">
+				<Name>НастройкаПоказателейДляРаспределенияРасходовНаСебестоимостьПродукции</Name>
+				<Code/>
+				<Description>Настройка показателей для распределения расходов на себестоимость продукции</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c67b759a-3d79-4d70-a64a-a9dc69f25a7b">
+				<Name>НастройкаПоказателейДляРаспределенияРасходовМеждуОВЗ</Name>
+				<Code/>
+				<Description>Настройка показателей для распределения расходов между ОВЗ</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0661a83d-bb7d-4610-a4d9-d66548e54962">
+				<Name>ПриемкаВнутреннихРабот</Name>
+				<Code/>
+				<Description>Приемка внутренних работ</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="1f9152bb-c079-4bb6-95a1-ad0aebf88bed">
+		<Name>Себестоимость</Name>
+		<Code/>
+		<Description>Себестоимость</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="ebbc45a0-8898-4456-a62c-ca4d8197006b">
+				<Name>ДоначислениеНалогаНаИмущество</Name>
+				<Code/>
+				<Description>Доначисление налога на имущество</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="44ee5f98-9137-43a8-b973-78792b040a32">
+				<Name>ПризнаниеРасходовПоИсследованиямИРазработкам</Name>
+				<Code/>
+				<Description>Признание расходов по исследованиям и разработкам</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8d3e641e-9a16-41f9-93fd-3a1ff3923eb7">
+				<Name>РасчетПартийИСебестоимости</Name>
+				<Code/>
+				<Description>Распределение затрат и расчет себестоимости</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="cfba58ed-04ef-4177-ae97-74a4146d1018">
+				<Name>РаспределениеНДС</Name>
+				<Code/>
+				<Description>Распределение НДС</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="bd3ff3a1-054e-4c47-bd35-4112455cb44d">
+				<Name>РасчетСтоимостиИнвестицииВАренду</Name>
+				<Code/>
+				<Description>Расчет стоимости инвестиции в аренду</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4f44dbf7-a506-49f8-a2e0-2e93e8728c03">
+				<Name>РасчетСтоимостиВнеоборотныхАктивов</Name>
+				<Code/>
+				<Description>Расчет стоимости ОС и НМА</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ad5092c2-bf0c-448b-a0b3-4b3980f61373">
+				<Name>ПереносОстатковПодНовыйВидДеятельности</Name>
+				<Code/>
+				<Description>Перенос остатков под новый вид деятельности</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="38e1917a-bdb3-40fe-8137-b1fe2e967e5a">
+				<Name>АктуализацияДвиженийПоВнеоборотнымАктивам</Name>
+				<Code/>
+				<Description>Актуализация движений по внеоборотным активам</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="b1f9f5a9-56cb-460d-8530-d80d19422428">
+		<Name>УчетПоУСН</Name>
+		<Code/>
+		<Description>Учет по УСН</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="df9aaab6-bf83-4c6f-b8c9-e5383ee02842">
+				<Name>ПризнаниеРасходовПриУСН</Name>
+				<Code/>
+				<Description>Признание расходов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a9629b6d-fa47-4d6d-a091-9ab9b26d0a68">
+				<Name>РасчетНалогаУСН</Name>
+				<Code/>
+				<Description>Расчет налога УСН</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="231e701e-64ff-451f-8d8b-40f1e61d1608">
+				<Name>СторноДоходовКУДиР</Name>
+				<Code/>
+				<Description>Сторнирование доходов КУДиР</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="a44d10f6-1266-473e-9161-8ef6a5a2a8d4">
+		<Name>ФормированиеЗатрат</Name>
+		<Code/>
+		<Description>Формирование затрат</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="6c5a8425-2a21-423e-a3b2-ea69f4c22e8c">
+				<Name>АктуализацияПараметровУзловКомпонентовАмортизации</Name>
+				<Code/>
+				<Description>Актуализация параметров узлов и компонентов амортизации</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="74acd660-d136-4ab0-8124-50306ec95e5a">
+				<Name>АннулированиеПодарочныхСертификатов</Name>
+				<Code/>
+				<Description>Аннулирование подарочных сертификатов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4e85413e-2b54-4da7-a8e2-210c8aac7608">
+				<Name>ЗакрытиеРасходовОтВыбытияОС</Name>
+				<Code/>
+				<Description>Закрытие расходов от выбытия ОС</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a32e7e96-b60a-4b33-bd4a-0638c6b91d9a">
+				<Name>НачислениеАмортизацииНМА</Name>
+				<Code/>
+				<Description>Начисление амортизации НМА</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a3ba651d-51b9-4d5d-a073-b5bcfc19e0ea">
+				<Name>НачислениеАмортизацииОС</Name>
+				<Code/>
+				<Description>Начисление амортизации ОС</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8f5960eb-fd9b-49b3-8dbf-50a832489756">
+				<Name>НачислениеАмортизацииОСиНМАМеждународныйУчет</Name>
+				<Code/>
+				<Description>Начисление амортизации ОС и НМА (международный учет)</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b2f6276f-bb62-490c-aebf-dd9e17ae4d53">
+				<Name>НачислениеПроцентовПоАренде</Name>
+				<Code/>
+				<Description>Начисление процентов по аренде</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="9decb672-aab3-43cd-89e5-e56d01cfdae0">
+				<Name>НачислениеРезервовПоОплатеТруда</Name>
+				<Code/>
+				<Description>Начисление резервов по оплате труда</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ab727b20-6c70-4d1c-b74c-9666f367a3a3">
+				<Name>ОформлениеВыработкиСотрудников</Name>
+				<Code/>
+				<Description>Оформление выработки сотрудников</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="96f54859-9cab-43ef-897d-f098ab61d211">
+				<Name>ПереоценкаАренды</Name>
+				<Code/>
+				<Description>Переоценка взаиморасчетов по аренде</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="10644ffa-0576-4e1d-9417-907efb7889ad">
+				<Name>ПогашениеСтоимостиТМЦВЭксплуатации</Name>
+				<Code/>
+				<Description>Погашение стоимости ТМЦ в эксплуатации</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="358fd80e-aa27-4501-a151-03bbe0636eb3">
+				<Name>ПризнаниеВНалоговомУчетеАрендныхПлатежей</Name>
+				<Code/>
+				<Description>Признание в налоговом учете арендных платежей</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="69aa9fb0-4cfa-48a4-bb6b-eb40befc75ad">
+				<Name>РасчетЗемельногоНалога</Name>
+				<Code/>
+				<Description>Расчет земельного налога</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e38d15b1-b6c0-450a-b779-bba9ea83a27f">
+				<Name>РасчетНалогаНаИмущество</Name>
+				<Code/>
+				<Description>Расчет налога на имущество</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="20b616fd-d0ad-4819-94a8-c35b657ee67d">
+				<Name>РасчетТорговогоСбора</Name>
+				<Code/>
+				<Description>Расчет торгового сбора</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="85e21fe5-bbe2-4fca-af9e-72595dfad342">
+				<Name>РасчетТранспортногоНалога</Name>
+				<Code/>
+				<Description>Расчет транспортного налога</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b5e93248-8c9f-4d5b-95e7-18a458acbc72">
+				<Name>ФормированиеДвиженийПоВнеоборотнымАктивам</Name>
+				<Code/>
+				<Description>Формирование движений по ОС и НМА</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c647cb1b-f200-47d0-80fa-504939c330aa">
+				<Name>ФормированиеРезервовПоСомнительнымДолгам</Name>
+				<Code/>
+				<Description>Формирование резервов по сомнительным долгам</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="12a914d2-5722-4a7c-bcc2-5b29b6eee9b9">
+				<Name>ОтражениеЗарплатыВФинансовомУчете</Name>
+				<Code/>
+				<Description>Отражение зарплаты в финансовом учете</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="96ce0c77-83d0-424b-ac95-55e262727e4e">
+		<Name>ФормированиеФинансовогоРезультатаГруппа</Name>
+		<Code/>
+		<Description>Формирование финансового результата группа</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="abcf2bce-a44b-4d04-a979-c25093f6ec5a">
+				<Name>ОформлениеДокументовРаспределенияРасходовПоНаправлениямДеятельности</Name>
+				<Code/>
+				<Description>Оформление документов распределения расходов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="38dccfb9-1998-41cb-b81b-ceb224726b38">
+				<Name>РаспределениеДоходовПоНаправлениямДеятельности</Name>
+				<Code/>
+				<Description>Распределение доходов по направлениям деятельности</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="eafb1ed8-2b93-486a-9029-d68abcd3d439">
+				<Name>РаспределениеРасходовПоНаправлениямДеятельности</Name>
+				<Code/>
+				<Description>Распределение расходов по направлениям деятельности</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7aac16ac-25e2-4fd2-ab65-a8bfcd4e5fd6">
+				<Name>РасчетЕНС</Name>
+				<Code/>
+				<Description>Расчет ЕНС</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ea27b7de-9394-4ee0-aaf2-619abc939fad">
+				<Name>ФормированиеДвиженийПоНДС</Name>
+				<Code/>
+				<Description>Формирование движений по НДС</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ee1f1e67-09c8-48e9-850a-f96a01e87177">
+				<Name>ФормированиеРезервовПодОбесценениеЗапасов</Name>
+				<Code/>
+				<Description>Формирование резервов под обесценение запасов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="74330d7a-41dd-457b-ad76-2b8cc1fca9b3">
+				<Name>ФормированиеФинансовогоРезультата</Name>
+				<Code/>
+				<Description>Формирование финансового результата</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="87f66d8c-7382-45ec-8cd5-ba5745fe1a6a">
+				<Name>ОбесценениеВНА</Name>
+				<Code/>
+				<Description>Обесценение ВНА</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="1c984649-4af4-456a-a871-1ac68d9cf65e">
+		<Name>НеоперативнаяОчередьЗаданий</Name>
+		<Code/>
+		<Description>Неоперативная очередь заданий</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="defd49e8-68e9-49fa-836f-2b8c798789b3">
+				<Name>НеоперативноеДопроведениеДокументов</Name>
+				<Code/>
+				<Description>Допроведение документов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="2f406fc4-9dc5-437d-a0da-fd9f464c007a">
+		<Name>ОтражениеДвиженийПоУправленческомуБалансу</Name>
+		<Code/>
+		<Description>Отражение движений по управленческому балансу</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="d2dc53aa-6220-4501-81be-6167ba1aafd0">
+				<Name>ОтражениеДвиженийДокументовПоУправленческомуБалансу</Name>
+				<Code/>
+				<Description>Управленческий баланс</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>
